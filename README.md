@@ -5,13 +5,13 @@
 
 My repository for BYUI WDD230 class projects
 
-## WDD 230 - Web Fundamentals
+## WDD 230 - Web Frontend Development I
 
 ### Winter 2024
 
 ### Topics
 
-`byui` `wdd230` `school` `fall` `school-project` `school-assignments` `school-education` `byu-idaho` `html` `css`
+`byui` `wdd230` `school` `winter` `school-project` `school-assignments` `school-education` `byu-idaho` `html` `css` `javascript`
 
 ---
 
@@ -46,9 +46,13 @@ This index is for the github pages for hosting all of the sites being developed.
 - This course is using
 
 <a href="https://code.visualstudio.com/" title="vscode"><img src="https://github.com/get-icon/geticon/raw/master/icons/visual-studio-code.svg" alt="vscode" width="31px" height="31px"></a>
+<a href="https://tc39.es/ecma262/" title="ECMAScript 6"><img src="https://github.com/get-icon/geticon/raw/master/icons/es6.svg" alt="ECMAScript 6" width="31px" height="31px"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript"><img src="https://github.com/get-icon/geticon/raw/master/icons/javascript.svg" alt="JavaScript" width="31px" height="31px"></a>
 <a href="https://www.w3.org/TR/html5/" title="HTML5"><img src="https://github.com/get-icon/geticon/raw/master/icons/html-5.svg" alt="HTML5" width="31px" height="31px"></a>
 <a href="https://www.w3.org/TR/CSS/" title="CSS3"><img src="https://github.com/get-icon/geticon/raw/master/icons/css-3.svg" alt="CSS3" width="31px" height="31px"></a>
+<a href="https://eslint.org/" title="ESLint"><img src="https://github.com/get-icon/geticon/raw/master/icons/eslint.svg" alt="ESLint" width="31px" height="31px"></a>
 <a href="https://prettier.io/" title="Prettier"><img src="https://github.com/get-icon/geticon/raw/master/icons/prettier.svg" alt="Prettier" width="31px" height="31px"></a>
+<a href="https://www.markdownguide.org/" title="markdown"><img src="https://github.com/get-icon/geticon/raw/master/icons/markdown.svg" alt="markdown" width="31px" height="31px"></a>
 <a href="https://git-scm.com/" title="git"><img src="https://github.com/get-icon/geticon/raw/master/icons/git-icon.svg" alt="git" width="31px" height="31px"></a>
 <a href="https://github.com/" title="github"><img src="https://github.com/get-icon/geticon/raw/master/icons/github-icon.svg" alt="github" width="31px" height="31px"></a>
 
