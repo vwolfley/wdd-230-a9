@@ -63,6 +63,11 @@ h1 {
     padding: 15px;
 }
 
+#profile-img {
+    width: auto;
+    height: 80px;
+}
+
 main {
     flex-grow: 1;
     display: flex;
@@ -107,4 +112,9 @@ footer .social img {
     width: 60px;
     height: 60px;
     padding-top: 15px;
+}
+
+#azFlag{
+    width: auto;
+    height: 80px;
 }
