@@ -1,0 +1,36 @@
+# What is humans.txt? It's a TXT file that contains information about the different people who have contributed to building this website.
+# This helps for questions about the functionallity and future development.
+# For more information on this file visit humanstxt.org
+
+# The humans responsible & technology colophon
+==============================================
+
+# TEAM
+
+    WDD-230-A9 Groupd
+    	Name:  Vern Wolfley
+    	Role: GIS Engineer III
+
+
+# THANKS
+
+    Ryan Powell @azmag.gov
+    Quinn Castro @azmag.gov
+
+
+# TECHNOLOGY COLOPHON
+
+    Standards: JavaScript, HTML5, CSS3
+    Components: 
+
+# SITE
+
+    Site Name: DD230 Home Page
+    Site URL: https://vwolfley.github.io/wdd-230-a9/
+    Version: 1.0.0
+	Last updated: 2023-12-06
+    Creation date: 2024-01-10
+	Language: English
+	Doctype: HTML5
+	IDE: VS Code
+    License: MIT
