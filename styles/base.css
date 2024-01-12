@@ -1,3 +1,8 @@
+/* This file contains the base styles for the site. */
+
+/* import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
 :root {
     /* change the values below to your colors from your palette */
     --primary-color: #002e5d;
@@ -6,7 +11,7 @@
     --accent2-color: #666666;
 
     /* change the values below to your chosen font(s) */
-    --heading-font: Palatino, Georgia, serif;
+    --heading-font: Paytone One, Georgia, serif;
     --paragraph-font: "Trebuchet MS", Arial, sans-serif;
 
     /* these colors below should be chosen from among your palette colors above */
@@ -30,6 +35,14 @@ body {
     font-size: 22px;
     margin: 0;
     padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
 }
 
 /* #content {
@@ -55,23 +68,32 @@ nav a:hover {
     color: var(--nav-hover-link-color);
 }
 
-h1 {
-    font-family: var(--heading-font);
-    font-size: 2em;
-    color: var(--headline-color-on-white);
-    margin: 0;
-    padding: 15px;
+#headTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 0 50px;
+    padding: 5px;
+    gap: 20px;
 }
 
 #profile-img {
     width: auto;
-    height: 80px;
+    height: 100px;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 2em;
+    color: var(--headline-color-on-white);
+    
 }
 
 main {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
     background-color: var(--paragraph-background-color);
     color: var(--paragraph-color-on-white);
 }
@@ -101,7 +123,7 @@ footer a:hover {
 }
 
 footer p {
-    font-size: 1.2em;
+    font-size: 0.7em;
 }
 
 footer p a:hover {
@@ -109,12 +131,18 @@ footer p a:hover {
 }
 
 footer .social img {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     padding-top: 15px;
 }
 
-#azFlag{
+#azFlag {
     width: auto;
-    height: 80px;
+    height: 50px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
