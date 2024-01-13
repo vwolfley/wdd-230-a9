@@ -29,7 +29,7 @@ My repository for BYUI WDD230 class projects
 
 This index is for the github pages for hosting all of the sites being developed.
 
-- [Github Page](https://vwolfley.github.io/wdd-230-a9/)
+- [Github Page](https://vwolfley.github.io/wdd230/)
 
 ---
 
