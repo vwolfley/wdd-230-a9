@@ -9,6 +9,7 @@
     --secondary-color: #0062b8;
     --accent1-color: #ffffff;
     --accent2-color: #666666;
+    --accent3-color: #c0c0c0;
 
     /* change the values below to your chosen font(s) */
     --heading-font: Paytone One, Georgia, serif;
@@ -45,13 +46,9 @@ h6 {
     font-family: var(--heading-font);
 }
 
-/* #content {
-    max-width: 1600px;
-    margin: 0 auto;
-} */
-
 nav {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     background-color: var(--primary-color);
 }
@@ -71,10 +68,12 @@ nav a:hover {
 #headTitle {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin: 0 0 0 50px;
+    /* margin: 0 0 0 50px; */
     padding: 5px;
     gap: 20px;
+    background-color: var(--accent3-color);
 }
 
 #profile-img {
@@ -86,7 +85,6 @@ h1 {
     font-family: var(--heading-font);
     font-size: 2em;
     color: var(--headline-color-on-white);
-    
 }
 
 main {
@@ -99,18 +97,21 @@ main {
 }
 
 .attribute {
-    font-size: 1em;
+    font-size: 1.75em;
     padding: 15px;
+    border-bottom: 1px solid var(--accent3-color);
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     background-color: var(--primary-color);
     color: #ffffff;
     padding: 25px 50px;
     margin-top: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 footer a {
@@ -123,7 +124,8 @@ footer a:hover {
 }
 
 footer p {
-    font-size: 0.7em;
+    font-size: 0.65em;
+    margin: 5px;
 }
 
 footer p a:hover {
@@ -144,5 +146,47 @@ footer .social img {
 .copyright {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 10px;
+}
+
+/* Section Card Area */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+    }
+
+/* Section Card */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--accent3-color);
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.la-card {
+    list-style-type: none;
+}
+
+.la-card li {
+    padding: 5px;
 }

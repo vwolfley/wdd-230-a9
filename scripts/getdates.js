@@ -4,11 +4,14 @@ const options2 = { weekday: "short", year: "numeric", month: "short", day: "nume
 
 const date = new Date()
 
-const modDate = date.toLocaleDateString("en-US", options2);
-document.getElementById("lastModified").innerHTML = `Last Modified: ${modDate}`;
+// let modDate = date.toLocaleDateString("en-US", options2);
+// document.getElementById("lastModified").innerHTML = `Last Modified: ${modDate}`;
 
-const copyrightYear = date.getFullYear();
+let copyrightYear = date.getFullYear();
 document.getElementById("cYear").innerHTML = `&copy; ${copyrightYear}`;
+
+let lastModif = new Date(document.lastModified);
+document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModif}`;
 
 // console.log(modDate);
 // console.log(copyrightYear);

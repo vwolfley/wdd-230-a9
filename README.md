@@ -38,6 +38,8 @@ This index is for the github pages for hosting all of the sites being developed.
 - 🔗 [Google Chrome Web Browser](https://google.com/chrome/)
 - 🔗 [Visual Studio Code (aka VS Code)](https://code.visualstudio.com/)
 - 🔗 [Live Server VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- 🔗 [HTML Validation Service](https://validator.w3.org/)
+- 🔗 [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
 ---
 
