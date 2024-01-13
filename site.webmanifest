@@ -1,8 +1,9 @@
 {
     "name": "WDD230 Home Page",
     "short_name": "WDD230",
-    "description": "TWDD230 Home Page for Vern Wolfley's Web Projects.",
+    "description": "WDD 230 - Web Frontend Development course assignment portal for Vern Wolfley",
     "lang": "en-US",
+    "start_url": "https://vwolfley.github.io/wdd230/",
     "icons": [
         {
             "src": "favicon.ico",
