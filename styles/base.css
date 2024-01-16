@@ -67,13 +67,15 @@ nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-link-color);
 }
+nav .active {
+	color: yellow;
+}
 
 #headTitle {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* margin: 0 0 0 50px; */
     padding: 5px;
     gap: 20px;
     background-color: var(--accent3-color);
@@ -99,9 +101,50 @@ main {
 }
 
 .attribute {
-    font-size: 1.75em;
+    font-size: 1em;
     padding: 15px;
+    text-align: center;
     border-bottom: 1px solid var(--accent3-color);
+}
+
+/* Section Card Area */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+}
+
+/* Section Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--accent3-color);
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.la-card {
+    list-style-type: none;
+    padding: 0;
+}
+
+.la-card li {
+    padding: 5px;
 }
 
 /* Footer */
@@ -150,45 +193,4 @@ footer .social img {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-}
-
-/* Section Card Area */
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-    grid-auto-rows: auto;
-    grid-gap: 2rem;
-}
-
-/* Section Card */
-
-.card {
-    display: flex;
-    flex-direction: column;
-    border: solid 1px var(--accent3-color);
-    border-radius: 10px;
-}
-
-.card-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: var(--accent1-color);
-    border-radius: 10px 10px 0 0;
-    justify-content: center;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-.la-card {
-    list-style-type: none;
-}
-
-.la-card li {
-    padding: 5px;
 }

@@ -1,0 +1,15 @@
+/* Larger Views ******************************/
+@media only screen and (min-width: 740px) {
+    nav {
+        flex-direction: row;
+    }
+    .attribute {
+        font-size: 1.75em;
+    }
+
+    /* Section Card Area */
+    .card-grid {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+    }
+}
