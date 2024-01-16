@@ -1,5 +1,5 @@
 # What is humans.txt? It's a TXT file that contains information about the different people who have contributed to building this website.
-# This helps for questions about the functionallity and future development.
+# This helps for questions about the functionality and future development.
 # For more information on this file visit humanstxt.org
 
 # The humans responsible & technology colophon
@@ -7,9 +7,10 @@
 
 # TEAM
 
-    WDD-230-A9 Groupd
+    WDD-230-A9
     	Name:  Vern Wolfley
-    	Role: GIS Engineer III
+    	Role: Student Developer
+        @wolfleyvern
 
 
 # THANKS
@@ -25,8 +26,8 @@
 
 # SITE
 
-    Site Name: DD230 Home Page
-    Site URL: https://vwolfley.github.io/wdd-230-a9/
+    Site Name: WDD230 Home Page
+    Site URL: https://vwolfley.github.io/wdd230/
     Version: 1.0.0
 	Last updated: 2023-12-06
     Creation date: 2024-01-10
