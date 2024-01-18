@@ -10,7 +10,7 @@ const date = new Date()
 let copyrightYear = date.getFullYear();
 document.getElementById("cYear").innerHTML = `&copy; ${copyrightYear}`;
 
-let lastModif = new Date(document.lastModified);
+let lastModif = new Date(document.lastModified).toGMTString();
 document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModif}`;
 
 // console.log(modDate);
