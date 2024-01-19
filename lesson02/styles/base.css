@@ -1,27 +1,20 @@
 /* CSS Style Sheet for design-principles.html */
 
+/* Import Google Font - Inter & Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
     /* change the values below to your colors from your palette */
-    --primary-color: #002e5d;
-    --secondary-color: #0062b8;
+    --primary-color: #364958;
+    --secondary-color: #3b6064;
     --accent1-color: #ffffff;
-    --accent2-color: #666666;
-    --accent3-color: #c0c0c0;
+    --accent2-color: #55828b;
+    --accent3-color: #87bba2;
+    --accent4-color: #c9e4ca;
 
     /* change the values below to your chosen font(s) */
-    --heading-font: Paytone One, Georgia, serif;
-    --paragraph-font: "Trebuchet MS", Arial, sans-serif;
-
-    /* these colors below should be chosen from among your palette colors above */
-    --headline-color-on-white: #002e5d; /* headlines on a white background */
-    --headline-color-on-color: white; /* headlines on a colored background */
-    --paragraph-color-on-white: #002e5d; /* paragraph text on a white background */
-    --paragraph-color-on-color: #666666; /* paragraph text on a colored background */
-    --paragraph-background-color: #ffffff;
-    --nav-link-color: #ffffff;
-    --nav-background-color: #002e5d;
-    --nav-hover-link-color: #ffffff;
-    --nav-hover-background-color: #0062b8;
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Inter", sans-serif;
 }
 
 html,
@@ -31,7 +24,9 @@ body {
     min-height: 100vh;
     background-color: #ffffff;
     font-family: var(--paragraph-font);
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.15;
     margin: 0;
     padding: 0;
@@ -43,21 +38,31 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font);
+    font-weight: 600;
+    font-style: normal;
 }
 
-h1 {
-    font-size: 2em;
-    color: var(--headline-color-on-white);
+/* Mobile or Base Views ********************************* */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--accent4-color);
+    padding: 25px 50px;
+}
+header h2{
+    margin: 0.35em 0;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--paragraph-background-color);
-    color: var(--paragraph-color-on-white);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px 15px;
+    padding: 50px;
 }
+
 /* Section Card Area */
 .card-grid {
     display: grid;
@@ -71,7 +76,7 @@ main {
 .card {
     display: flex;
     flex-direction: column;
-    border: solid 1px var(--accent3-color);
+    border: solid 1px var(--primary-color);
     border-radius: 10px;
 }
 
@@ -79,7 +84,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--accent1-color);
     border-radius: 10px 10px 0 0;
     justify-content: center;
@@ -144,4 +149,24 @@ footer .social img {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+}
+
+/* Tablet Views ********************************* */
+@media screen and (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    main section:nth-child(3) {
+        grid-column: span 2;
+    }
+}
+
+/* Desktop Views ********************************* */
+@media screen and (min-width: 992px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    main section:nth-child(3) {
+        grid-column: span 1;
+    }
 }
