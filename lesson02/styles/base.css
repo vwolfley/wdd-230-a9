@@ -100,7 +100,7 @@ footer {
     justify-items: center;
     align-items: center;
     background-color: var(--primary-color);
-    color: var(--accent4-color);
+    color: var(--accent1-color);
     padding: 25px 50px;
     margin-top: auto;
 }
