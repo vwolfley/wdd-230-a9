@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: #ffffff;
+    color: var(--primary-color);
     font-family: var(--paragraph-font);
     font-size: 18px;
     font-weight: 400;
@@ -52,7 +53,7 @@ header {
     color: var(--accent4-color);
     padding: 25px 50px;
 }
-header h2{
+header h2 {
     margin: 0.35em 0;
 }
 
@@ -78,6 +79,7 @@ main {
     flex-direction: column;
     border: solid 1px var(--primary-color);
     border-radius: 10px;
+    background-color: rgba(201, 228, 202, 0.5);
 }
 
 .card-header {
@@ -101,6 +103,11 @@ main {
 
 .la-card li {
     padding: 5px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
 }
 
 /* Footer */
