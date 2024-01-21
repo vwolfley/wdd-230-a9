@@ -1,8 +1,16 @@
 /* Larger Views ******************************/
-@media only screen and (min-width: 740px) {
-    nav {
+@media only screen and (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+    .navigation {
         flex-direction: row;
     }
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
     .attribute {
         font-size: 1.75em;
     }
@@ -10,7 +18,13 @@
     /* Section Card Area */
     .card-grid {
         display: grid;
-        grid-template-columns: 1fr 400px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card-grid section:nth-child(1) {
+        grid-column: span 2;
+    }
+    .map {
+        grid-column: span 3;
     }
     footer .footer-info {
         display: flex;

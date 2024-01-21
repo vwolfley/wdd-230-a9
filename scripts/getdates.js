@@ -1,8 +1,8 @@
 //toLocaleDateString
-const options = { weekday: "long", year: "numeric", month: "long", day: "numeric"};
-const options2 = { weekday: "short", year: "numeric", month: "short", day: "numeric"};
+const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+const options2 = { weekday: "short", year: "numeric", month: "short", day: "numeric" };
 
-const date = new Date()
+const date = new Date();
 
 // let modDate = date.toLocaleDateString("en-US", options2);
 // document.getElementById("lastModified").innerHTML = `Last Modified: ${modDate}`;
@@ -15,3 +15,11 @@ document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModif}
 
 // console.log(modDate);
 // console.log(copyrightYear);
+
+const hamButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
+
+hamButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+    hamButton.classList.toggle("open");
+});
