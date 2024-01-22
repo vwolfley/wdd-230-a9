@@ -73,21 +73,22 @@ h1 {
 
 /* Nav bar */
 #menu {
-    font-size: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 3px 7px 6px;
-    background-color: #eee;
-    color: #000;
     position: absolute;
-    top: 0.75em;
-    right: 0.75em;
+    top: 0.25em;
+    right: 0.25em;
+    color: var(--primary-color);
+    text-align: center;
+    width: 40px;
+    height: auto;
 }
 
 #menu::before {
+    font-size: 2rem;
     content: "☰";
 }
 
 #menu.open::before {
+    font-size: 1.5rem;
     content: "X";
 }
 
