@@ -38,6 +38,8 @@ body {
     line-height: 1.15;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
 }
 h1,
 h2,
@@ -49,7 +51,7 @@ h6 {
 }
 /* Mobile or Base Views ********************************* */
 
-/* header */
+/* Header */
 
 #headTitle {
     display: flex;
@@ -187,7 +189,13 @@ main {
 }
 
 .la-card li a {
-    font-size: 0.8em;
+    font-size: 0.72em;
+}
+/* Map section */
+.map {
+    display: flex;
+    border: solid 1px var(--accent3-color);
+    border-radius: 10px;
 }
 
 .map iframe {
