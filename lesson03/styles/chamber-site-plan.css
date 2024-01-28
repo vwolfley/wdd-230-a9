@@ -56,7 +56,6 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font);
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     color: var(--headline-color-on-white);
@@ -85,7 +84,8 @@ header > h2 {
 p {
     font-family: var(--paragraph-font);
     color: var(--paragraph-color-on-white);
-    padding: 1em;
+    padding: .25em 1.25em;
+    margin: .25em 1em;
 }
 
 ul {
@@ -180,7 +180,7 @@ nav a:hover {
 .sitemap {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(8, 15%);
+    grid-template-columns: repeat(8, 10%);
     grid-template-rows: 3em 1.5em 1.5em 3em;
     grid-template-areas:
         ". . . home home . . ."
