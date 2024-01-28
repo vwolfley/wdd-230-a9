@@ -108,6 +108,16 @@ section {
     align-items: center;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch ;
+}
+.navigation h3 {
+    text-align: center;
+}
+
 .colors {
     width: 100%;
     min-width: 350px;
