@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <!-- <link rel="icon" type="image/png" href="../favicon.ico" /> -->
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>West Valley Chamber of Commerce</title>
@@ -26,9 +27,9 @@
         <meta name="twitter:image" content="https://vwolfley.github.io/wdd230/images/west-valley-lp.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <!-- specific icons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png" />
         <link rel="manifest" href="site.webmanifest" />
 
         <link type="text/plain" rel="author" href="humans.txt" />
@@ -37,8 +38,82 @@
         <link type="text/css" rel="stylesheet" href="./styles/base.css" />
         <link type="text/css" rel="stylesheet" href="./styles/medium.css" />
         <link type="text/css" rel="stylesheet" href="./styles/larger.css" />
-</head>
-<body>
-    
-</body>
+    </head>
+    <body>
+        <header class="nav">
+            <input type="checkbox" id="nav-check" />
+            <div class="nav-header">
+                <div class="nav-title">West Valley Chamber of Commerce</div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/" target="_blank">Home</a>
+                <a href="#" target="_blank">Discover</a>
+                <a href="#" target="_blank">Directory</a>
+                <a href="#" target="_blank">Join</a>
+            </nav>
+        </header>
+        <main>
+            <!-- Content -->
+        </main>
+
+        <footer class="footer">
+            <div class="footer__addr">
+                <h1 class="footer__logo">Something</h1>
+                <h2>Contact</h2>
+                <address>
+                    5534 Somewhere In. The World 22193-10212<br />
+                    <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+                </address>
+            </div>
+            <ul class="footer__nav">
+                <li class="nav__item">
+                    <h2 class="nav__title">Links</h2>
+                    <ul class="nav__ul">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="#">Join</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav__item nav__item--extra">
+                    <h2 class="nav__title">Technology</h2>
+
+                    <ul class="nav__ul nav__ul--extra">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Software Design</a></li>
+                        <li><a href="#">Digital Signage</a></li>
+                        <li><a href="#">Automation</a></li>
+                        <li><a href="#">Artificial Intelligence</a></li>
+                        <li><a href="#">IoT</a></li>
+                    </ul>
+                </li> -->
+
+                <!-- <li class="nav__item">
+                    <h2 class="nav__title">Links</h2>
+                    <ul class="nav__ul">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="#">Join</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+
+            <div class="legal">
+                <p><span id="cYear">&copy;</span> West Valley Chamber of Commerce | Vern Wolfley | WDD 230 Project</p> 
+                <div class="legal__links">
+                    <span id="lastModified"></span>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts/chamberJS.js"></script>
+    </body>
 </html>
