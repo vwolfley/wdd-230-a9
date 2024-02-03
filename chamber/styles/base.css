@@ -167,7 +167,7 @@ main {
 }
 
 .btn:hover {
-    background-color: rgba(var(--accent3-color), 0.5);
+    background-color: #651717;
 }
 
 .spotlights {
