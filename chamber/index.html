@@ -41,78 +41,61 @@
     </head>
     <body>
         <header class="nav">
-            <input type="checkbox" id="nav-check" />
             <div class="nav-header">
-                <div class="nav-title">West Valley Chamber of Commerce</div>
+                <img src="images/logos/vwcc-logo.png" alt="West Valley Chamber of Commerce" />
+                <h1 id="nav-title">West Valley Chamber of Commerce</h1>
             </div>
-            <div class="nav-btn">
-                <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
-
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
             <nav class="nav-links">
-                <a href="/" target="_blank">Home</a>
-                <a href="#" target="_blank">Discover</a>
-                <a href="#" target="_blank">Directory</a>
-                <a href="#" target="_blank">Join</a>
+                <ul>
+                    <li><a href="/" target="_blank">Home</a></li>
+                    <li><a href="#" target="_blank">Discover</a></li>
+                    <li><a href="#" target="_blank">Directory</a></li>
+                    <li><a href="#" target="_blank">Join</a></li>
+                </ul>
             </nav>
+            <label for="nav-toggle" class="nav-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </header>
+
         <main>
             <!-- Content -->
         </main>
 
-        <footer class="footer">
-            <div class="footer__addr">
-                <h1 class="footer__logo">Something</h1>
-                <h2>Contact</h2>
-                <address>
-                    5534 Somewhere In. The World 22193-10212<br />
-                    <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
-                </address>
-            </div>
-            <ul class="footer__nav">
-                <li class="nav__item">
-                    <h2 class="nav__title">Links</h2>
-                    <ul class="nav__ul">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Discover</a></li>
-                        <li><a href="#">Directory</a></li>
-                        <li><a href="#">Join</a></li>
-                    </ul>
-                </li>
-                <!-- <li class="nav__item nav__item--extra">
-                    <h2 class="nav__title">Technology</h2>
-
-                    <ul class="nav__ul nav__ul--extra">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Software Design</a></li>
-                        <li><a href="#">Digital Signage</a></li>
-                        <li><a href="#">Automation</a></li>
-                        <li><a href="#">Artificial Intelligence</a></li>
-                        <li><a href="#">IoT</a></li>
-                    </ul>
-                </li> -->
-
-                <!-- <li class="nav__item">
-                    <h2 class="nav__title">Links</h2>
-                    <ul class="nav__ul">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Discover</a></li>
-                        <li><a href="#">Directory</a></li>
-                        <li><a href="#">Join</a></li>
-                    </ul>
-                </li> -->
-            </ul>
-
-            <div class="legal">
-                <p><span id="cYear">&copy;</span> West Valley Chamber of Commerce | Vern Wolfley | WDD 230 Project</p> 
-                <div class="legal__links">
-                    <span id="lastModified"></span>
+        <footer>
+            <section class="footer">
+                <div class="footer-title">
+                    <img src="images/logos/vwcc-logo.png" alt="West Valley Chamber of Commerce" />
+                    <h2>West Valley Chamber of Commerce</h2>
                 </div>
-            </div>
+                <div class="footer-addr">
+                    <h3>Contact</h3>
+                    <address>
+                        5555 W Somewhere Blvd<br />
+                        Litchfield Park, AZ 85340<br />
+                        <a class="footer-btn" href="mailto:example@gmail.com">Email Us</a>
+                    </address>
+                </div>
+                <ul class="footer-nav">
+                    <h3>Links</h3>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+
+                <div class="legal">
+                    <div class="">
+                        <span><span id="cYear">&copy;</span> West Valley Chamber of Commerce | Vern Wolfley | WDD 230 Project</span>
+                    </div>
+                    <div class="">
+                        <span id="lastModified"></span>
+                    </div>
+                </div>
+            </section>
         </footer>
         <script src="scripts/chamberJS.js"></script>
     </body>
