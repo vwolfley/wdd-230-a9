@@ -8,12 +8,12 @@
 :root {
     /* change the values below to your colors from your palette */
     --primary-color: rgb(3, 105, 161);
-    --secondary-color: rgba(21, 128, 61, 1);
-    --accent1-color: rgba(186, 230, 253, 1);
-    --accent2-color: rgba(187, 247, 208, 1);
+    --secondary-color: rgb(105, 161, 3);
+    --accent1-color: #024970;
+    --accent2-color: #fbfef9;
     --accent3-color: rgb(127, 29, 29);
-    --text-color-main: #082f49;
-    --text-color-secondary: #f8fafc;
+    --text-color-main: #001520;
+    --text-color-secondary: #ffffff;
 
     /* change the values below to your chosen font(s) */
     --heading-font: "Raleway", sans-serif;
@@ -28,7 +28,7 @@
     --nav-link-color: var(--text-color-secondary);
     --nav-background-color: var(--primary-color);
     --nav-hover-link-color: var(--text-color-main);
-    --nav-hover-background-color: var(--accent2-color);
+    --nav-hover-background-color: var(--secondary-color);
 }
 
 /*  Styles for site */
@@ -58,7 +58,6 @@ h6 {
     font-family: var(--heading-font);
     font-weight: 700;
     font-style: normal;
-    color: var(--headline-color-on-white);
 }
 /* Header and Navigation */
 
@@ -113,7 +112,10 @@ header a {
 }
 
 header a:hover {
-    color: var(--nav-hover-background-color);
+    /* color: var(--nav-hover-background-color); */
+    background-color: var(--nav-hover-background-color);
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 /* *** Main Section ***************************** */
@@ -233,6 +235,7 @@ main {
 
 footer {
     background-color: var(--accent1-color);
+    color: var(--accent2-color);
     padding: 30px 30px 20px 30px;
     border-top: 1px solid #e5e5e5;
 }
@@ -264,9 +267,10 @@ footer {
 }
 
 .footer h3 {
-    margin-top: 1em;
+    margin: 0.5em 0;
     font-size: 1.25em;
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--text-color-secondary);
 }
 
 .footer-addr {
@@ -275,14 +279,8 @@ footer {
     margin-bottom: 2em;
 }
 
-footer .nav-title {
-    font-weight: 400;
-    font-size: 15px;
-}
-
 .footer address {
     font-style: normal;
-    color: var(--text-color-main);
 }
 
 .footer-btn {
@@ -291,13 +289,18 @@ footer .nav-title {
     justify-content: center;
     height: 36px;
     max-width: max-content;
-    background-color: rgb(33, 33, 33, 0.07);
+    background-color: var(--accent3-color);
     border-radius: 100px;
-    color: #2f2f2f;
+    color: var(--text-color-secondary);
     line-height: 0;
     margin: 0.6em 0;
     font-size: 1rem;
-    padding: 0 1.3em;
+    padding: .15em 1.3em;
+    text-decoration: none;
+}
+
+.footer-btn:hover {
+    background-color: #651717;
 }
 
 .footer-nav {
@@ -316,7 +319,7 @@ footer .nav-title {
     
 }
 .footer-nav ul a {
-    color: var(--text-color-main);
+    color: var(--text-color-secondary);
 }
 
 .footer-nav li {
@@ -326,10 +329,11 @@ footer .nav-title {
     text-decoration: none;
 }
 .footer-nav a:hover {
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
+    background-color: var(--nav-hover-background-color);
+    padding: 10px 20px;
+    border-radius: 5px;
 }
-
-
 .legal {
     grid-row: 3;
     grid-column: 1 / span 9;
@@ -337,7 +341,7 @@ footer .nav-title {
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.7em;
-    color: var(--text-color-main);
+    color: #F0EDEE;
 }
 
 /* MObile CSS ******************************** */
@@ -347,7 +351,7 @@ footer .nav-title {
     .nav-links {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 110px;
         left: 0;
         width: 100%;
         background-color: var(--nav-background-color);
