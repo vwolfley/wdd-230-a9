@@ -4,8 +4,9 @@ const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
 
-//First Attempt
-// button.addEventListener("click", () => {
+// button.addEventListener("click", addBookOfMormon);
+
+// function addBookOfMormon() {
 //     if (input.value != "") {
 //         let listItem = document.createElement("li");
 //         //call function to capitalize first letter of input value
@@ -29,35 +30,7 @@ const list = document.querySelector("#list");
 //         input.focus();
 //         return;
 //     }
-// });
-
-button.addEventListener("click", addBookOfMormon);
-
-function addBookOfMormon() {
-    if (input.value != "") {
-        let listItem = document.createElement("li");
-        //call function to capitalize first letter of input value
-        listItem.textContent = capitalizeWords(input.value.trim());
-
-        // create delete button to append to list item
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "❌";
-        listItem.append(deleteButton);
-
-        list.append(listItem);
-        input.value = "";
-        input.focus();
-
-        deleteButton.addEventListener("click", () => {
-            list.removeChild(listItem);
-            input.focus();
-        });
-    } else {
-        alert("You must enter a chapter name");
-        input.focus();
-        return;
-    }
-}
+// }
 
 // function to capitalize first letter of input value
 function capitalizeFirstLetter(string) {
@@ -154,9 +127,49 @@ function checkBookChapter(bookTitle, chapterNumber) {
             if (chapterNumber >= 1 && chapterNumber <= book.chapters) {
                 return `${book.title} ${chapterNumber}`;
             } else {
-                return `${book.title} does not have this many chapters ${chapterNumber}`;
+                return alert(`${book.title} does not have this many chapters ${chapterNumber}`);
             }
         }
     }
-    return `Book ${bookTitle} not found in the Book of Mormon`;
+    return alert(`Book ${bookTitle} not found in the Book of Mormon`);
 }
+
+// First Attempt anonymous function
+button.addEventListener("click", () => {
+    if (input.value != "") {
+        let listItem = document.createElement("li");
+        //call function to capitalize first letter of input value
+        listItem.textContent = capitalizeWords(input.value.trim());
+
+        const userInfo = listItem.textContent.split(" ");
+        const bookTitle = userInfo[0];
+        const chapterNumber = parseInt(userInfo[1]);
+        console.log(bookTitle, chapterNumber);
+
+        listItem.textContent = checkBookChapter(bookTitle, chapterNumber);
+
+        if (listItem.textContent !== "") {
+            // create delete button to append to list item
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "❌";
+            listItem.append(deleteButton);
+
+            list.append(listItem);
+            input.value = "";
+            input.focus();
+        } else {
+            input.value = "";
+            input.focus();
+            return;
+        }
+
+        deleteButton.addEventListener("click", () => {
+            list.removeChild(listItem);
+            input.focus();
+        });
+    } else {
+        alert("You must enter a chapter name");
+        input.focus();
+        return;
+    }
+});
