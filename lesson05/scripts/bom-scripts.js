@@ -4,34 +4,6 @@ const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
 
-// button.addEventListener("click", addBookOfMormon);
-
-// function addBookOfMormon() {
-//     if (input.value != "") {
-//         let listItem = document.createElement("li");
-//         //call function to capitalize first letter of input value
-//         listItem.textContent = capitalizeWords(input.value.trim());
-
-//         // create delete button to append to list item
-//         const deleteButton = document.createElement("button");
-//         deleteButton.textContent = "❌";
-//         listItem.append(deleteButton);
-
-//         list.append(listItem);
-//         input.value = "";
-//         input.focus();
-
-//         deleteButton.addEventListener("click", () => {
-//             list.removeChild(listItem);
-//             input.focus();
-//         });
-//     } else {
-//         alert("You must enter a chapter name");
-//         input.focus();
-//         return;
-//     }
-// }
-
 // function to capitalize first letter of input value
 function capitalizeFirstLetter(string) {
     // Ensure input string is converted to lowercase first
@@ -40,6 +12,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+// function to capitalize first letter of each word in input value
 function capitalizeWords(string) {
     // Split the string by whitespace characters
     const words = string.split(/\s+/);
@@ -84,7 +57,7 @@ const bookOfMormon = [
         chapters: 1,
     },
     {
-        title: "Words of Mormon",
+        title: "Words Of Mormon",
         chapters: 1,
     },
     {
@@ -121,6 +94,7 @@ const bookOfMormon = [
     },
 ];
 
+// function to check if book and chapter number are valid
 function checkBookChapter(bookTitle, chapterNumber) {
     for (const book of bookOfMormon) {
         if (book.title === bookTitle) {
@@ -134,6 +108,15 @@ function checkBookChapter(bookTitle, chapterNumber) {
     return alert(`Book ${bookTitle} not found in the Book of Mormon`);
 }
 
+// Add event listener to input field to allow user to press enter key to submit
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        // console.log(event);
+        // alert("Enter key pressed");
+        button.click();
+    }
+});
+
 // First Attempt anonymous function
 button.addEventListener("click", () => {
     if (input.value != "") {
@@ -142,8 +125,10 @@ button.addEventListener("click", () => {
         listItem.textContent = capitalizeWords(input.value.trim());
 
         const userInfo = listItem.textContent.split(" ");
-        const bookTitle = userInfo[0];
-        const chapterNumber = parseInt(userInfo[1]);
+        // Split the input value into an array of words and join them back together with a space
+        const bookTitle = userInfo.slice(0, -1).join(" ");
+        // Convert the chapter number to an integer from the last element of the array
+        const chapterNumber = parseInt(userInfo[userInfo.length - 1]);
         console.log(bookTitle, chapterNumber);
 
         listItem.textContent = checkBookChapter(bookTitle, chapterNumber);
@@ -157,18 +142,18 @@ button.addEventListener("click", () => {
             list.append(listItem);
             input.value = "";
             input.focus();
+
+            deleteButton.addEventListener("click", () => {
+                list.removeChild(listItem);
+                input.focus();
+            });
         } else {
             input.value = "";
             input.focus();
             return;
         }
-
-        deleteButton.addEventListener("click", () => {
-            list.removeChild(listItem);
-            input.focus();
-        });
     } else {
-        alert("You must enter a chapter name");
+        alert("You must enter a book name and chapter number");
         input.focus();
         return;
     }

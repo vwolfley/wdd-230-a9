@@ -12,3 +12,10 @@ document.getElementById("cYear").innerHTML = `&copy; ${copyrightYear}`;
 
 let lastModif = new Date(document.lastModified).toGMTString();
 document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModif}`;
+
+
+// Toggle Dark/Light Mode
+function screenMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
