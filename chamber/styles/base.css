@@ -64,33 +64,35 @@ h6 {
     background-color: #1e293b;
     color: #f8fafc;
 }
-/* Header and Navigation */
+/* Header and Navigation *********************** */
 
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+    padding: 20px 10px 20px 50px;
     background-color: var(--nav-background-color);
     box-shadow: 0 1px 8px #ddd;
-    position: relative;
 }
-
-.nav-header {
+.nav-brand {
     display: flex;
     align-items: center;
 }
-.nav-header img {
+.nav-brand img {
     width: 60px;
     height: auto;
 }
-
+.nav-box {
+    display: flex;
+}
+.nav-info {
+    display: flex;
+    align-items: center;
+}
 #nav-title {
     margin-right: auto;
     font-size: 1.5em;
     color: var(--nav-link-color);
 }
-
 .nav-links {
     display: flex;
     order: 3;
@@ -104,19 +106,16 @@ header {
 #nav-toggle {
     display: none;
 }
-
 header li {
     list-style: none;
     display: inline-block;
     padding: 0 20px;
 }
-
 header a {
     text-decoration: none;
     color: var(--nav-link-color);
     transition: all 0.3s ease 0s;
 }
-
 header a:hover {
     /* color: var(--nav-hover-background-color); */
     background-color: var(--nav-hover-background-color);
@@ -124,94 +123,37 @@ header a:hover {
     border-radius: 5px;
 }
 
+/* Dark Mode Button Switch ********************* */
 .dark-mode-btn {
-    position: absolute;
-    top: calc(100%); 
-    right: 0; 
+    display: flex;
+    order: 4;
 }
-
-  .knobs,
-  .layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .button {
-    position: relative;
-    top: 0;
-    width: 74px;
-    height: 36px;
-    margin: -115px auto 0 auto;
-    overflow: hidden;
-  }
-  
-  .button.r,
-  .button.r .layer {
-    border-radius: 100px;
-  }
-  .checkbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 3;
-  }
-  
-  .knobs {
-    z-index: 2;
-  }
-  
-  .layer {
-    width: 100%;
-    background-color: #ebf7fc;
-    transition: 0.3s ease all;
-    z-index: 1;
-  }
-  #button-1 .knobs:before {
-    content: "L";
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 20px;
-    height: 10px;
-    color: #fff;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1;
-    padding: 9px 4px;
-    background-color: #03a9f4;
-    border-radius: 50%;
-    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
-  }
-  
-  #button-1 .checkbox:checked + .knobs:before {
-    content: "D";
-    left: 42px;
-    background-color: #f44336;
-  }
-  
-  #button-1 .checkbox:checked ~ .layer {
-    background-color: #fcebeb;
-  }
-  
-  #button-1 .knobs,
-  #button-1 .knobs:before,
-  #button-1 .layer {
-    transition: 0.3s ease all;
-  }
-
-
-
-
-
-
+.toggle {
+    background-color: #1e293b;
+    width: 50px;
+    height: 21px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    display: none;
+}
+.slider {
+    height: 15px;
+    width: 15px;
+    background-color: var(--nav-link-color);
+    border-radius: 12px;
+    margin: 4px;
+}
+input:checked + .toggle {
+    background-color: var(--nav-link-color);
+    /* background-color: #1e293b; */
+}
+input:checked + .toggle > .slider {
+    align-self: flex-end;
+    background-color: #1e293b;
+}
 /* *** Main Section ***************************** */
 main {
     flex: 1;
@@ -220,7 +162,7 @@ main {
 }
 
 .hero {
-    background-image: url('../images/west-valley-lp.jpeg'); 
+    background-image: url("../images/west-valley-lp.jpeg");
     background-size: cover;
     background-position: center;
     padding: 150px 0;
@@ -250,7 +192,6 @@ main {
     color: var(--text-color-secondary);
     margin-bottom: 20px;
 }
-
 
 .btn {
     padding: 10px 20px;
@@ -282,6 +223,9 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.card.dark-mode {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+}
 
 .info {
     display: grid;
@@ -301,6 +245,9 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.event.dark-mode {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
 }
 
 .weather {
@@ -389,7 +336,7 @@ footer {
     line-height: 0;
     margin: 0.6em 0;
     font-size: 1rem;
-    padding: .15em 1.3em;
+    padding: 0.15em 1.3em;
     text-decoration: none;
 }
 
@@ -410,7 +357,6 @@ footer {
     padding: 0;
     margin: 0;
     cursor: pointer;
-    
 }
 .footer-nav ul a {
     color: var(--text-color-secondary);
@@ -435,7 +381,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.7em;
-    color: #F0EDEE;
+    color: #f0edee;
 }
 
 /* MObile CSS ******************************** */
@@ -483,5 +429,14 @@ footer {
         height: 2px;
         background-color: var(--nav-link-color);
         margin: 6px 0;
+    }
+    #nav-title {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #nav-title {
+        font-size: 1.2em;
     }
 }

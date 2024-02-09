@@ -16,6 +16,12 @@ document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModif}
 
 // Toggle Dark/Light Mode
 function screenMode() {
-    var element = document.body;
+    const element = document.body;
     element.classList.toggle("dark-mode");
+
+    const sections = document.querySelectorAll("div.info, div.spotlights, div.event, article.card");
+    sections.forEach(section => {
+        section.classList.toggle("dark-mode");
+    });
+    
  }

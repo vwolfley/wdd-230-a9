@@ -44,30 +44,34 @@
     </head>
     <body>
         <header class="nav">
-            <div class="nav-header">
+            <div class="nav-brand">
                 <img src="images/logos/vwcc-logo.png" alt="West Valley Chamber of Commerce" />
                 <h1 id="nav-title">West Valley Chamber of Commerce</h1>
             </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="/" target="_blank">Home</a></li>
-                    <li><a href="#" target="_blank">Discover</a></li>
-                    <li><a href="#" target="_blank">Directory</a></li>
-                    <li><a href="#" target="_blank">Join</a></li>
-                </ul>
-            </nav>
-            <label for="nav-toggle" class="nav-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <div class="dark-mode-btn">
-                <!-- <button onclick="screenMode()" class="dark-mode-btn">Toggle dark mode</button> -->
-                <div class="button r" id="button-1">
-                    <input type="checkbox" class="checkbox" onclick="screenMode()"/>
-                    <div class="knobs"></div>
-                    <div class="layer"></div>
+            <div class="nav-box">
+                <div class="nav-info">
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+                    <nav class="nav-links">
+                        <ul>
+                            <li><a href="/" target="_blank">Home</a></li>
+                            <li><a href="#" target="_blank">Discover</a></li>
+                            <li><a href="#" target="_blank">Directory</a></li>
+                            <li><a href="#" target="_blank">Join</a></li>
+                        </ul>
+                    </nav>
+                    <label for="nav-toggle" class="nav-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="dark-mode-btn">
+                    <input type="checkbox" id="darkOption" class="checkbox" onclick="screenMode()" />
+                    <label for="darkOption" class="toggle">
+                        <div class="slider">
+                        </div>
+                    </label>
                 </div>
             </div>
         </header>
