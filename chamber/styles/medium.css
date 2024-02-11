@@ -5,6 +5,18 @@
         font-size: 1.2em;
     }
     
+    .info {
+        grid-template-columns: 1fr 1fr;
+    }
+    .weather {
+        grid-column: 2/3;
+        order: 2;
+    }
+
+    .events {
+        grid-column: 1/2;
+        order: 1;
+    }
 
     .cards {
         grid-template-columns: repeat(2, 1fr);

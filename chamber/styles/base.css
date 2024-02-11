@@ -229,17 +229,16 @@ main {
 
 .info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-row: 2;
+    grid-template-columns: 1fr;
     grid-gap: 10px;
     padding: 50px;
 }
 
 .events {
-    grid-column: span 3;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    order: 2;
 }
 
 .event {
@@ -256,11 +255,11 @@ main {
 }
 
 .weather {
-    grid-column: span 2;
     display: flex;
     flex-direction: column;
     justify-self: center;
     row-gap: 20px;
+    order: 1;
 }
 .weather-info {
     display: flex;
@@ -275,6 +274,9 @@ main {
 .weather-icon img {
     width: 70px;
     height: auto;
+}
+.weather-info.dark-mode {
+    background-color: #4b5563;
 }
 
 /* *** Footer ************************************ */
