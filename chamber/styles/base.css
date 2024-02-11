@@ -30,6 +30,7 @@
     --nav-hover-link-color: var(--text-color-main);
     --nav-hover-background-color: var(--secondary-color);
 }
+/* Mobile CSS ******************************** */
 
 /*  Styles for site */
 html,
@@ -83,6 +84,7 @@ header {
 }
 .nav-box {
     display: flex;
+    gap: 20px;
 }
 .nav-info {
     display: flex;
@@ -90,22 +92,11 @@ header {
 }
 #nav-title {
     margin-right: auto;
-    font-size: 1.5em;
+    font-size: .8em;
     color: var(--nav-link-color);
 }
-.nav-links {
-    display: flex;
-    order: 3;
-}
-.nav-links ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 0;
-}
-#nav-toggle {
-    display: none;
-}
+
+
 header li {
     list-style: none;
     display: inline-block;
@@ -233,6 +224,7 @@ main {
 
 .card.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+    background-color: #1e293b;
 }
 
 .info {
@@ -260,6 +252,7 @@ main {
 }
 .event.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+    background-color: #1e293b;
 }
 
 .weather {
@@ -400,6 +393,7 @@ footer {
 
 /* Add this CSS for mobile styles */
 @media screen and (max-width: 768px) {
+
     .nav-links {
         display: none;
         position: absolute;
@@ -409,10 +403,10 @@ footer {
         background-color: var(--nav-background-color);
         z-index: 1000;
     }
-
     .nav-links ul {
         display: block;
         text-align: center;
+        padding: 0;
     }
 
     .nav-links ul li {
@@ -442,13 +436,6 @@ footer {
         background-color: var(--nav-link-color);
         margin: 6px 0;
     }
-    #nav-title {
-        font-size: 0.8em;
-    }
 }
 
-@media screen and (max-width: 992px) {
-    #nav-title {
-        font-size: 1.2em;
-    }
-}
+

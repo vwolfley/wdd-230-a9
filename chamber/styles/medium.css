@@ -1,8 +1,12 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 992px) {
+    #nav-title {
+        font-size: 1.2em;
+    }
+    
+
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
