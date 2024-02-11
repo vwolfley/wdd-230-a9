@@ -19,7 +19,7 @@ function screenMode() {
     const element = document.body;
     element.classList.toggle("dark-mode");
 
-    const sections = document.querySelectorAll("div.info, div.spotlights, div.event, article.card");
+    const sections = document.querySelectorAll("div.info, div.spotlights, div.event, article.card, div.weather-info");
     sections.forEach(section => {
         section.classList.toggle("dark-mode");
     });

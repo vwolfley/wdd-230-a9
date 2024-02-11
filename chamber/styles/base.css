@@ -30,6 +30,7 @@
     --nav-hover-link-color: var(--text-color-main);
     --nav-hover-background-color: var(--secondary-color);
 }
+/* Mobile CSS ******************************** */
 
 /*  Styles for site */
 html,
@@ -46,7 +47,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 h1,
@@ -83,6 +84,7 @@ header {
 }
 .nav-box {
     display: flex;
+    gap: 20px;
 }
 .nav-info {
     display: flex;
@@ -90,22 +92,11 @@ header {
 }
 #nav-title {
     margin-right: auto;
-    font-size: 1.5em;
+    font-size: .8em;
     color: var(--nav-link-color);
 }
-.nav-links {
-    display: flex;
-    order: 3;
-}
-.nav-links ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 0;
-}
-#nav-toggle {
-    display: none;
-}
+
+
 header li {
     list-style: none;
     display: inline-block;
@@ -208,54 +199,67 @@ main {
 }
 
 .spotlights {
-    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     grid-gap: 20px;
-    align-items: stretch;
+    align-items: center;
+    flex: 1;
 }
 
 .card {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: #cbd5e1;
+    max-width: 24rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
+
 .card.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+    background-color: #1e293b;
 }
 
 .info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 10px;
     padding: 50px;
 }
 
 .events {
-    grid-column: span 3;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    order: 2;
 }
 
 .event {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: #cbd5e1;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 .event.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+    background-color: #1e293b;
 }
 
 .weather {
-    grid-column: span 2;
     display: flex;
     flex-direction: column;
     justify-self: center;
     row-gap: 20px;
+    order: 1;
 }
 .weather-info {
     display: flex;
@@ -270,6 +274,9 @@ main {
 .weather-icon img {
     width: 70px;
     height: auto;
+}
+.weather-info.dark-mode {
+    background-color: #4b5563;
 }
 
 /* *** Footer ************************************ */
@@ -388,6 +395,7 @@ footer {
 
 /* Add this CSS for mobile styles */
 @media screen and (max-width: 768px) {
+
     .nav-links {
         display: none;
         position: absolute;
@@ -397,10 +405,10 @@ footer {
         background-color: var(--nav-background-color);
         z-index: 1000;
     }
-
     .nav-links ul {
         display: block;
         text-align: center;
+        padding: 0;
     }
 
     .nav-links ul li {
@@ -430,13 +438,6 @@ footer {
         background-color: var(--nav-link-color);
         margin: 6px 0;
     }
-    #nav-title {
-        font-size: 0.8em;
-    }
 }
 
-@media screen and (max-width: 992px) {
-    #nav-title {
-        font-size: 1.2em;
-    }
-}
+
