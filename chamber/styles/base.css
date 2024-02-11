@@ -46,7 +46,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 h1,
@@ -213,16 +213,21 @@ main {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     grid-gap: 20px;
-    align-items: stretch;
+    align-items: center;
 }
 
 .card {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: #cbd5e1;
+    /* max-width: 24rem; */
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
+
 .card.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
 }
@@ -230,6 +235,7 @@ main {
 .info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row: 2;
     grid-gap: 10px;
     padding: 50px;
 }
@@ -242,9 +248,12 @@ main {
 }
 
 .event {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    border-color: #cbd5e1;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 .event.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
