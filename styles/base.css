@@ -142,6 +142,32 @@ main {
     background-color: var(--paragraph-background-color);
     color: var(--paragraph-color-on-white);
 }
+.hero {
+    position: relative;
+
+}
+.hero img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-title {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background: radial-gradient(#fff, #6596c5);
+	border: 1px solid rgba(101,150,197,1);
+	padding: .8rem;
+	box-shadow: 0 0 3rem #fff;
+	opacity: 0.65;
+    text-wrap: nowrap;
+}
+.hero-title p {
+	margin: 0;
+	padding: .25rem;
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
 
 .attribute {
     font-size: 1em;
