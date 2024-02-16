@@ -150,10 +150,82 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
+    max-width: 1800px;
+	margin: 0 auto;
 }
 
-.hero {
-    background-image: url("../images/west-valley-lp.jpeg");
+
+/* TEMP ************************* */
+/* .hero-temp {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: #fff; 
+}
+
+.hero-title {
+    font-size: 3rem;
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+} */
+/* TEMP ************************* */
+
+.hero-temp {
+	margin: 10px auto;
+	position: relative;
+	border: 1px solid rgba(0,0,0,.1);
+	max-height: 800px;
+}
+
+.hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero-info {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background: radial-gradient(#fff, #4D5B97);
+	border: 1px solid rgba(0,0,0,.75);
+	padding: 1.5rem;
+	box-shadow: 0 0 3rem #fff;
+	opacity: 0.75;
+	/* Buenas */
+}
+
+.hero-info h1 {
+	margin: 0;
+	padding: .25rem;
+	font-weight: 700;
+	font-size: 1.5rem;
+	font-family:"Great Vibes", serif;
+}
+
+/* .hero {
+    background-image: url("../images/west-valley-lp.webp");
     background-size: cover;
     background-position: center;
     padding: 150px 0;
@@ -182,7 +254,7 @@ main {
     font-weight: 600;
     color: var(--text-color-secondary);
     margin-bottom: 20px;
-}
+} */
 
 .btn {
     padding: 10px 20px;
