@@ -3,6 +3,7 @@
 const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
+let chaptersArray = getChapterList() || [];
 
 // function to capitalize first letter of input value
 function capitalizeFirstLetter(string) {
@@ -95,7 +96,14 @@ const bookOfMormon = [
 ];
 
 // function to check if book and chapter number are valid
-function checkBookChapter(bookTitle, chapterNumber) {
+function checkBookChapter(userInput) {
+    let userInfo = userInput.split(" ");
+    // Split the input value into an array of words and join them back together with a space
+    const bookTitle = userInfo.slice(0, -1).join(" ");
+    // Convert the chapter number to an integer from the last element of the array
+    const chapterNumber = parseInt(userInfo[userInfo.length - 1]);
+    console.log(bookTitle, chapterNumber);
+
     for (const book of bookOfMormon) {
         if (book.title === bookTitle) {
             if (chapterNumber >= 1 && chapterNumber <= book.chapters) {
@@ -119,42 +127,70 @@ document.addEventListener("keydown", function (event) {
 
 // First Attempt anonymous function
 button.addEventListener("click", () => {
+    // console.log(input.value);
     if (input.value != "") {
-        let listItem = document.createElement("li");
-        //call function to capitalize first letter of input value
-        listItem.textContent = capitalizeWords(input.value.trim());
-
-        const userInfo = listItem.textContent.split(" ");
-        // Split the input value into an array of words and join them back together with a space
-        const bookTitle = userInfo.slice(0, -1).join(" ");
-        // Convert the chapter number to an integer from the last element of the array
-        const chapterNumber = parseInt(userInfo[userInfo.length - 1]);
-        console.log(bookTitle, chapterNumber);
-
-        listItem.textContent = checkBookChapter(bookTitle, chapterNumber);
-
-        if (listItem.textContent !== "") {
-            // create delete button to append to list item
-            const deleteButton = document.createElement("button");
-            deleteButton.textContent = "❌";
-            listItem.append(deleteButton);
-
-            list.append(listItem);
-            input.value = "";
-            input.focus();
-
-            deleteButton.addEventListener("click", () => {
-                list.removeChild(listItem);
-                input.focus();
-            });
-        } else {
-            input.value = "";
-            input.focus();
-            return;
-        }
+         //call function to capitalize first letter of input value
+        bofm = capitalizeWords(input.value);
+          // call function to check if book and chapter number are valid
+        scripture = checkBookChapter(bofm);
+        // add scripture to array
+        chaptersArray.push(scripture);
+        // save array to local storage
+        setChapterList();
+        // call function to display list
+        displayList(scripture);
+        input.value = "";
+        input.focus();
     } else {
         alert("You must enter a book name and chapter number");
+        input.value = "";
         input.focus();
         return;
     }
+});
+
+function displayList(item) {
+    // create list item to append to list
+    let listItem = document.createElement("li");
+    listItem.textContent = item;
+    // create delete button to append to list item
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = "❌";
+
+    if (listItem.textContent !== "") {
+        // append list item to list
+        list.append(listItem);
+        // append delete button to list item
+        listItem.append(deleteButton);
+    } else {
+        input.value = "";
+        input.focus();
+        return;
+    }
+    // add event listener to delete button
+    deleteButton.addEventListener("click", () => {
+        list.removeChild(listItem);
+        deleteChapter(listItem.textContent);
+        input.focus();
+    });
+
+    input.focus();
+}
+
+function setChapterList() {
+    localStorage.setItem("myFavBOMList", JSON.stringify(chaptersArray));
+}
+
+function getChapterList() {
+    return JSON.parse(localStorage.getItem("myFavBOMList"));
+}
+
+function deleteChapter(chapter) {
+    chapter = chapter.slice(0, chapter.length - 1);
+    chaptersArray = chaptersArray.filter((item) => item !== chapter);
+    setChapterList();
+}
+
+chaptersArray.forEach((chapter) => {
+    displayList(chapter);
 });
