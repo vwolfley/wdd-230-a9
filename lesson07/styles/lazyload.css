@@ -1,0 +1,84 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Paytone One, Georgia, serif;
+    font-size: 22px;
+    line-height: 1.15;
+    background-color: #ffffff;
+}
+/* Main *************** */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    color: darkslategray;
+}
+
+main img {
+    opacity: 0;
+    animation: fadeInAnimation 3s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header ************** */
+
+.head-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 20px;
+    background-color: lightgray;
+}
+
+h1 {
+    font-size: 2em;
+    color: darkslategray;
+}
+
+/* Footer ***************** */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: lightgray;
+    color: darkslategrey;
+    padding: 25px 50px;
+    margin-top: auto;
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+footer p {
+    font-size: 0.65em;
+    margin: 5px;
+}
+.copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
