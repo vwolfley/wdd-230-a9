@@ -1,3 +1,4 @@
+// ************ Create date and last modified date for the footer ************
 //toLocaleDateString
 const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
 const options2 = { weekday: "short", year: "numeric", month: "short", day: "numeric" };
@@ -16,6 +17,8 @@ document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModif}
 // console.log(modDate);
 // console.log(copyrightYear);
 
+// ********* Hamburger Menu *********
+
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 
@@ -23,3 +26,21 @@ hamButton.addEventListener("click", () => {
     navigation.classList.toggle("open");
     hamButton.classList.toggle("open");
 });
+
+// ********* Page Visits Counter *********
+
+let numVisits = Number(window.localStorage.getItem("numVisitsCounter")) || 0;
+const visitsDisplay = document.querySelector(".visits");
+
+// Determine if this is the first visit or display the number of visits.
+if (numVisits === 0) {
+    visitsDisplay.textContent = `Welcome! This is your first visit.`;
+} else {
+    visitsDisplay.textContent = numVisits;
+}
+
+// visit counter increment
+numVisits++;
+
+// store the new visit count total into localStorage
+localStorage.setItem("numVisitsCounter", numVisits);
