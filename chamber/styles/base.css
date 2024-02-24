@@ -152,7 +152,7 @@ main {
     padding: 20px;
 }
 /* TEMP ************************* */
-.hero-temp {
+/* .hero-temp {
     position: relative;
 }
 .hero-temp img {
@@ -193,10 +193,10 @@ main {
     .hero-title-md {
         display: none;
     }
-}
+} */
 
 /* TEMP ************************* */
-/* .hero {
+.hero {
     background-image: url("../images/west-valley-lp.webp");
     background-size: cover;
     background-position: center;
@@ -226,7 +226,7 @@ main {
     font-weight: 600;
     color: var(--text-color-secondary);
     margin-bottom: 20px;
-} */
+}
 
 .btn {
     padding: 10px 20px;
