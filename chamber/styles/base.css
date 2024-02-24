@@ -63,7 +63,7 @@ h6 {
 
 .dark-mode {
     background-color: #1e293b;
-    color: #f8fafc;
+    color: var(--text-color-secondary);
 }
 /* Header and Navigation *********************** */
 
@@ -234,7 +234,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
+    color: var(--text-color-secondary);
     text-decoration: none;
 }
 
@@ -327,7 +327,7 @@ main {
 
 footer {
     background-color: var(--accent1-color);
-    color: var(--accent2-color);
+    color: var(--text-color-secondary);
     padding: 30px 30px 20px 30px;
     border-top: 1px solid #e5e5e5;
 }
@@ -432,7 +432,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 0.7em;
-    color: #f0edee;
+    color: var(--text-color-secondary);
 }
 
 /* MObile CSS ******************************** */
