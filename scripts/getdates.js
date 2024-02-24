@@ -36,11 +36,8 @@ const visitsDisplay = document.querySelector(".visits");
 if (numVisits === 0) {
     visitsDisplay.textContent = `Welcome! This is your first visit.`;
 } else {
-    visitsDisplay.textContent = numVisits;
+    visitsDisplay.textContent = numVisits + 1;
 }
-
-// visit counter increment
-numVisits++;
 
 // store the new visit count total into localStorage
 localStorage.setItem("numVisitsCounter", numVisits);
