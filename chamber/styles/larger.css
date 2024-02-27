@@ -7,6 +7,13 @@
     .cards {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    form label.sbs {
+        padding: .4rem 0;
+      }
+      .nav-info input {
+        display: none;
+    }
 }
 
 /* Tailwind Breakpoints */

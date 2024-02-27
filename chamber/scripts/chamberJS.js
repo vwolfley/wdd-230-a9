@@ -14,8 +14,6 @@ function getLastModified() {
 document.getElementById("lastModified").innerHTML = getLastModified();
 
 
-
-
 // Toggle Dark/Light Mode
 function screenMode() {
     const element = document.body;
