@@ -23,23 +23,6 @@ hamButton.addEventListener("click", () => {
     hamButton.classList.toggle("open");
 });
 
-// ********* Page Visits Counter *********
-function updatePageVisitsCounter() {
-    let numVisits = Number(window.localStorage.getItem("numVisitsCounter")) || 0;
-    const visitsDisplay = document.querySelector(".visits");
-
-    // Determine if this is the first visit or display the number of visits.
-    if (numVisits === 0) {
-        visitsDisplay.textContent = `Welcome! This is your first visit.`;
-    } else {
-        visitsDisplay.textContent = numVisits + 1;
-    }
-
-    // store the new visit count total into localStorage
-    localStorage.setItem("numVisitsCounter", numVisits);
-}
-updatePageVisitsCounter();
-
 // ********* Check Password Validation *********
 const pass1 = document.querySelector("#password");
 const pass2 = document.querySelector("#password2");
@@ -50,11 +33,22 @@ pass2.addEventListener("focusout", () => {
         message.textContent = "Passwords do not match!";
         message.style.color = "red";
         pass2.style.backgroundColor = "#fff0f3";
-		pass2.value = "";
-		pass2.focus();
+        pass2.value = "";
+        pass2.focus();
     } else {
         message.style.display = "none";
-		pass2.style.backgroundColor = "#fff";
-		pass2.style.color = "#000";
+        pass2.style.backgroundColor = "#fff";
+        pass2.style.color = "#000";
     }
 });
+
+const rangevalue = document.getElementById("rangevalue");
+const range = document.getElementById("rating");
+
+// RANGE event listener
+range.addEventListener("change", displayRatingValue);
+range.addEventListener("input", displayRatingValue);
+
+function displayRatingValue() {
+    rangevalue.innerHTML = range.value;
+}

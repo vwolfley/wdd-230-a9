@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Vern Wolfley - WDD 230 - Web Frontend Development</title>
+        <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal for Vern Wolfley" />
+        <meta name="author" content="Vern Wolfley" />
+        <meta name="copyright" content="Copyright 2024" />
+        <meta name="theme-color" content="#006EB6" />
+        <!-- Facebook Meta Tags -->
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vwolfley.github.io/wdd230/" />
+        <meta property="og:title" content="Vern Wolfley - WDD 230 - Web Frontend Development" />
+        <meta property="og:description" content="WDD 230 - Web Frontend Development course assignment portal for Vern Wolfley" />
+        <meta property="og:image" content="https://vwolfley.github.io/wdd230/images/west-valley-lp.webp" />
+        <meta property="og:image:type" content="image/png" />
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:title" content="Vern Wolfley - WDD 230 - Web Frontend Development" />
+        <meta name="twitter:description" content="WDD 230 - Web Frontend Development course assignment portal for Vern Wolfley" />
+        <meta name="twitter:image" content="https://vwolfley.github.io/wdd230/images/west-valley-lp.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- specific icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.webp" />
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.webp" />
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.webp" />
+        <link rel="manifest" href="site.webmanifest" />
+
+        <link type="text/plain" rel="author" href="humans.txt" />
+
+        <link rel="stylesheet" href="styles/normalize.css" />
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/larger.css" />
+    </head>
+    <body>
+        <header>
+            <div id="headTitle">
+                <img id="profile-img" src="images/profile-vwolfley.webp" alt="my profile" />
+                <h1>Vern Wolfley</h1>
+                <div id="menu"></div>
+            </div>
+
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#" title="home page link" class="active">Home</a></li>
+                    <li><a href="lesson03/chamber-site-plan.html" title="site plan page link">Site Plan</a></li>
+                    <li><a href="chamber/index.html" title="chamber page link">Chamber</a></li>
+                    <li><a href="https://www.byui.edu/" title="BYU-Idaho page link" target="_blank">BYU-Idaho</a></li>
+                    <li>
+                        <a
+                            href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/26?lang=eng&id=p12#p12"
+                            title="scripture link"
+                            target="_blank"
+                            >Scripture</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="form-section">
+            <form method="get" action="record.html">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label class="top">User Name* <input type="text" id="name" name="name" required /></label>
+                    <label class="top">Password* <input type="password" id="password" name="password" pattern="[A-Za-z19]{8,}" required /></label>
+                    <label class="top">Re-enter Password* <input type="password" id="password2" name="password2" required /></label>
+                    <label class="top"
+                        >Email*
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="someone@byui.edu"
+                            pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
+                            required
+                            title="Please enter a valid email address"
+                    /></label>
+                    <label class="top">Page Rating</label>
+                        <div id="rangevalue">1</div>
+                        <input type="range" id="rating" name="rating" min="1" max="10" value="1" step="1" list="rangevalues" />
+                        <datalist id="rangevalues">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </datalist>
+                </fieldset>
+                <input class="submitBtn" type="submit" value="Propose My Course" />
+            </form>
+        </main>
+
+        <footer>
+            <div class="footer-info">
+                <div class="copyright">
+                    <p>wdd-230-a9 <span id="cYear"></span> | Vern Wolfley | Arizona, USA</p>
+                    <img id="azFlag" src="images/arizona-flag.webp" alt="arizona-flag" loading="lazy" />
+                </div>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/vern-wolfley-b8322813/" target="_blank">
+                        <img src="images/linkedin-logo.webp" alt="instagram icon" loading="lazy" />
+                    </a>
+                    <a href="https://twitter.com/WolfleyVern" target="_blank">
+                        <img src="images/twitter-x-logo.webp" alt="twitter icon" loading="lazy" />
+                    </a>
+                    <a href="https://www.facebook.com/vwolfley" target="_blank">
+                        <img src="images/facebook-logo.webp" alt="face book icon" loading="lazy" />
+                    </a>
+                </div>
+            </div>
+
+            <p id="lastModified"></p>
+        </footer>
+        <script src="scripts/forms.js"></script>
+    </body>
+</html>
