@@ -10,6 +10,7 @@
     --accent1-color: #ffffff;
     --accent2-color: #666666;
     --accent3-color: #c0c0c0;
+    --accent4-color: #5d0000;
 
     /* font styles for webpage */
     --heading-font: Paytone One, Georgia, serif;
@@ -307,12 +308,12 @@ footer .social img {
     max-width: 600px;
 }
 form fieldset {
-    border: 1px solid #445ba9;
+    border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 0.5rem 5%;
 }
 form legend {
-    color: #445ba9;
+    color: var(--primary-color);
     margin: 0 1rem;
     padding: 0 0.5rem;
 }
@@ -320,7 +321,7 @@ form label.top,
 form div {
     display: block;
     padding-top: 1rem;
-    color: #9c2c13;
+    color: var(--secondary-color);
     font-size: 0.8rem;
 }
 form label.top input,
@@ -337,7 +338,7 @@ form label.top select {
 }
 form input.submitBtn {
     border: none;
-    background-color: #9c2c13;
+    background-color: var(--secondary-color);
     color: #fff;
     padding: 0.75rem 1.5rem;
     border-radius: 1rem;
@@ -345,37 +346,119 @@ form input.submitBtn {
     /* width: 96%;
     max-width: 20rem; */
 }
+form input.submitBtn:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
 form label.top input:required {
-    border-left: red solid 6px;
+    border-left: #a94442 solid 6px;
 }
 form label.top input:required:valid {
-    border-left: green solid 6px;
+    border-left: #3c763d solid 6px;
+}
+/* input[name="email"]:required:invalid {
+	background-color: #f2dede;
+} */
+input[name="email"]:required:valid {
+	 background-color: #dff0d8;
+}
+
+#formmessage,
+#submitmessage {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.success {
+    padding: 15px;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+.error {
+    padding: 15px;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+.show {
+    display: "";
+}
+.hide {
+    display: none;
 }
 
 #rating {
-	width: 230px;
-	margin-bottom: 0;
+    width: 230px;
+    margin-bottom: 0;
+    cursor: pointer;
 }
 
 #rangevalue {
     display: block;
     border: solid 1px #999;
     border-radius: 4px;
-    padding: 0.5rem;
+    padding: 0.25rem;
     color: #555;
     background-color: rgba(0, 0, 0, 0.1);
-	font-size: 1.20rem;
+    font-size: 0.8rem;
     max-width: 1.5rem;
     text-align: center;
 }
 
 #rangevalues {
-	display: flex;
+    display: flex;
     /* text-align: center; */
-	/* margin: 0 0 0 5px; */
-	width: 250px;
+    /* margin: 0 0 0 5px; */
+    width: 250px;
 }
 
 #rangevalues option {
-	flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+/*----------- Record.html - Form conformation page --------------*/
+
+#record .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#record h1 {
+    text-align: center;
+}
+#record p {
+    text-align: center;
+}
+#timestamp {
+    font-size: 0.75em;
+}
+
+#record a {
+    align-self: center;
+}
+
+button.homeBtn {
+    border: none;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.homeBtn:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
 }

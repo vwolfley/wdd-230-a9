@@ -45,7 +45,7 @@
 
             <nav>
                 <ul class="navigation">
-                    <li><a href="#" title="home page link" class="active">Home</a></li>
+                    <li><a href="/index.html" title="home page link" class="active">Home</a></li>
                     <li><a href="lesson03/chamber-site-plan.html" title="site plan page link">Site Plan</a></li>
                     <li><a href="chamber/index.html" title="chamber page link">Chamber</a></li>
                     <li><a href="https://www.byui.edu/" title="BYU-Idaho page link" target="_blank">BYU-Idaho</a></li>
@@ -62,40 +62,42 @@
         </header>
 
         <main class="form-section">
+            <div id="formmessage" class="" role="alert"></div>
             <form method="get" action="record.html">
                 <fieldset>
                     <legend>Applicant Information</legend>
                     <label class="top">User Name* <input type="text" id="name" name="name" required /></label>
-                    <label class="top">Password* <input type="password" id="password" name="password" pattern="[A-Za-z19]{8,}" required /></label>
+                    <label class="top">Password* <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" required /></label>
                     <label class="top">Re-enter Password* <input type="password" id="password2" name="password2" required /></label>
                     <label class="top"
-                        >Email*
+                        >Email with @byui.edu*
                         <input
                             type="email"
                             id="email"
                             name="email"
                             placeholder="someone@byui.edu"
-                            pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
-                            required
+                            pattern="[a-zA-Z0-9_.\-]+@byui.edu"
                             title="Please enter a valid email address"
+                            required
                     /></label>
                     <label class="top">Page Rating</label>
-                        <div id="rangevalue">1</div>
-                        <input type="range" id="rating" name="rating" min="1" max="10" value="1" step="1" list="rangevalues" />
-                        <datalist id="rangevalues">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </datalist>
+                    <div id="rangevalue">1</div>
+                    <input type="range" id="rating" name="rating" min="1" max="10" value="1" step="1" list="rangevalues" />
+                    <datalist id="rangevalues">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
                 </fieldset>
-                <input class="submitBtn" type="submit" value="Propose My Course" />
+                <div id="submitmessage" class="hide" role="alert"></div>
+                <input class="submitBtn" type="submit" onclick="validateForm(event)" value="Applicant Request" />
             </form>
         </main>
 
