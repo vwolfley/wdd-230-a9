@@ -12,6 +12,7 @@
     --accent1-color: #024970;
     --accent2-color: #fbfef9;
     --accent3-color: rgb(127, 29, 29);
+    --accent4-color: #651717;
     --text-color-main: #020617;
     --text-color-secondary: #ffffff;
 
@@ -29,6 +30,14 @@
     --nav-background-color: var(--primary-color);
     --nav-hover-link-color: var(--text-color-main);
     --nav-hover-background-color: var(--secondary-color);
+
+    --success-text: #3c763d;
+    --success-background: #dff0d8;
+    --success-border: #d6e9c6;
+
+    --error-text: #a94442;
+    --error-background: #f2dede;
+    --error-border: #ebccd1;
 }
 /* Mobile CSS ******************************** */
 
@@ -395,7 +404,7 @@ footer {
 }
 
 .footer-btn:hover {
-    background-color: #651717;
+    background-color: var(--accent4-color);
 }
 
 .footer-nav {
@@ -676,15 +685,112 @@ footer {
     margin: 0;
 }
 
-/*----------- FORM --------------*/
+/*----------- FORM Page --------------*/
+@media only screen and (min-width: 768px) {
+    .form-wrapper {
+        grid-template-columns: 1fr;
+        grid-column-gap: 80px;
+        grid-template-areas:
+            "header"
+            "form"
+            "membership";
+    }
+}
+.form-wrapper {
+    display: grid;
+    background-color: #fff;
+    color: #444;
+}
+.header {
+    grid-area: header;
+    place-self: center;
+    flex: 1;
+}
+.column1 {
+    grid-area: form;
+    flex: 2;
+}
+.column2 {
+    grid-area: membership;
+    flex: 3;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    
+}
+.membership-cards h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.membership-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.member-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: solid 1px #999;
+    border-radius: 4px;
+}
+.member-card h3 {
+    margin: 0 0 5px 0;
+    padding: 1.2rem;
+}
+.member-card div {
+    padding: .75rem;
+}
+.member-card p {
+    margin: 0;
+}
+.member-card ul {
+    margin-top: 0;
+}
+.np {
+    background-color: seaGreen;
+    color: var(--text-color-secondary);
+}
+.bronze {
+    background-color: #cd7f32;
+    color: var(--text-color-secondary);
+}
+.silver {
+    background-color: #c0c0c0;
+    color: var(--text-color-secondary);
+}
+.gold {
+    background-color: #ffd700;
+    color: var(--text-color-secondary);
+}
+
 form fieldset {
-    margin: 2rem 0;
-    border: 1px solid #445ba9;
+    margin: 1.5rem 0;
+    border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 0.5rem 2%;
 }
+form fieldset:last-of-type {
+    margin-bottom: 5px;
+}
 form legend {
-    color: #445ba9;
+    color: var(--primary-color);
     margin: 0 1rem;
     padding: 0 0.5rem;
 }
@@ -692,7 +798,7 @@ form label.top,
 form div {
     display: block;
     padding-top: 1rem;
-    color: #9c2c13;
+    color: var(--secondary-color);
     font-size: 0.8rem;
 }
 form label.top input,
@@ -715,7 +821,7 @@ form label.sbs {
 }
 form input.submitBtn {
     border: none;
-    background-color: #9c2c13;
+    background-color: var(--accent3-color);
     color: #fff;
     padding: 0.75rem 1.5rem;
     border-radius: 1rem;
@@ -723,9 +829,76 @@ form input.submitBtn {
     width: 96%;
     max-width: 20rem;
 }
+form input.submitBtn:hover {
+    background-color: var(--accent4-color);
+    cursor: pointer;
+}
 form label.top input:required {
-    border-left: red solid 6px;
+    border-left: var(--error-text) solid 6px;
 }
 form label.top input:required:valid {
-    border-left: green solid 6px;
+    border-left: var(--success-text) solid 6px;
+}
+.success {
+    margin-top: 5px;
+    padding: 15px;
+    background-color: var(--success-background);
+    border-color: var(--success-border);
+    color: var(--success-text);
+}
+.error {
+    margin-top: 5px;
+    padding: 15px;
+    background-color: var(--error-background);
+    border-color: var(--error-border);
+    color: var(--error-text);
+}
+.show {
+    display: flex;
+}
+.hide {
+    display: none;
+}
+
+/*----------- Thankyou.html - Form conformation page --------------*/
+
+#record .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--success-background);
+    border-color: var(--success-border);
+    color: var(--success-text);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#record h1 {
+    text-align: center;
+}
+#record p {
+    text-align: center;
+}
+#timestamp {
+    font-size: 0.75em;
+}
+
+#record a {
+    align-self: center;
+}
+
+button.homeBtn {
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.homeBtn:hover {
+    background-color: var(--accent1-color);
+    cursor: pointer;
 }
