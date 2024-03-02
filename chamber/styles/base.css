@@ -698,27 +698,31 @@ footer {
 }
 .form-wrapper {
     display: grid;
-    background-color: #fff;
-    color: #444;
+    background-color: var(--accent2-color);
+    color: var(--text-color-main);
 }
 .header {
     grid-area: header;
     place-self: center;
-    flex: 1;
+    order: 1;
 }
 .column1 {
     grid-area: form;
-    flex: 2;
+    order: 2;
 }
 .column2 {
     grid-area: membership;
-    flex: 3;
+    order: 3;
 }
 
 .form-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px;
+    width: 100%;
+    /* min-width: 500px; */
+    max-width: 600px;
 }
 form {
     display: flex;
@@ -729,11 +733,12 @@ form {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    
+    width: 100%;
+    max-width: 600px;
 }
 .membership-cards h2 {
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 0;
 }
 
 .membership-card-container {
@@ -755,7 +760,7 @@ form {
     padding: 1.2rem;
 }
 .member-card div {
-    padding: .75rem;
+    padding: 0.75rem;
 }
 .member-card p {
     margin: 0;
@@ -781,7 +786,7 @@ form {
 }
 
 form fieldset {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 0.5rem 2%;

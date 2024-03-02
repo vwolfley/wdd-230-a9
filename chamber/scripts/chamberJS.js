@@ -1,4 +1,3 @@
-
 // Display the copyright year
 function getCopyrightYear() {
     const year = new Date().getFullYear();
@@ -13,13 +12,12 @@ function getLastModified() {
 }
 document.getElementById("lastModified").innerHTML = getLastModified();
 
-
 // Toggle Dark/Light Mode
 function screenMode() {
     const element = document.body;
     element.classList.toggle("dark-mode");
 
-    const sections = document.querySelectorAll("div.info, div.spotlights, div.event, article.card, div.weather-info");
+    const sections = document.querySelectorAll("div.info, div.spotlights, div.event, article.card, div.weather-info, div.form-wrapper");
     sections.forEach((section) => {
         section.classList.toggle("dark-mode");
     });

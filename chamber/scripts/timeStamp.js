@@ -19,3 +19,8 @@ function timeStamp() {
     document.getElementById("timestamp").innerText = `Timestamp: ${timestamp}`;
 }
 timeStamp();
+
+// Function to set value of hidden input field with current date/time in milliseconds
+function setTimestamp() {
+    document.getElementById("timestampmilli").value = Date.now();
+}

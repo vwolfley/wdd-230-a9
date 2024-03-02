@@ -24,13 +24,11 @@
         display: none;
     }
     .form-wrapper {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-column-gap: 50px;
         grid-template-areas:
-            "header header header"
-            "form form membership";
+            "header header"
+            "form membership";
     }
 }
-@media only screen and (min-width: 768px) {
-    
-}
+
