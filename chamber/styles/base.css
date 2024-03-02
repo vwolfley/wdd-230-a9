@@ -817,7 +817,7 @@ form label.sbs {
     padding: 0.75rem 0;
     color: var(--text-color-main);
 }
-form input.submitBtn {
+form .submitBtn {
     border: none;
     background-color: var(--accent3-color);
     color: var(--text-color-secondary);
@@ -827,7 +827,7 @@ form input.submitBtn {
     width: 96%;
     max-width: 20rem;
 }
-form input.submitBtn:hover {
+form .submitBtn:hover {
     background-color: var(--accent4-color);
     cursor: pointer;
 }
