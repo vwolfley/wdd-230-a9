@@ -798,6 +798,7 @@ form div {
     font-size: 0.8rem;
 }
 form label.top input,
+form label.top textarea,
 form label.top select {
     -webkit-appearance: none;
     display: block;
