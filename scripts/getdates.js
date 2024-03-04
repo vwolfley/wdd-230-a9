@@ -39,22 +39,3 @@ function updatePageVisitsCounter() {
     localStorage.setItem("numVisitsCounter", numVisits);
 }
 updatePageVisitsCounter();
-
-// ********* Check Password Validation *********
-const pass1 = document.querySelector("#password");
-const pass2 = document.querySelector("#password2");
-const message = document.querySelector("#formmessage");
-
-pass2.addEventListener("focusout", () => {
-    if (pass1.value != pass2.value) {
-        message.textContent = "Passwords do not match!";
-        message.style.color = "red";
-        pass2.style.backgroundColor = "#fff0f3";
-		pass2.value = "";
-		pass2.focus();
-    } else {
-        message.style.display = "none";
-		pass2.style.backgroundColor = "#fff";
-		pass2.style.color = "#000";
-    }
-});
