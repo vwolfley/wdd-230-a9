@@ -915,9 +915,11 @@ button.homeBtn {
     text-align: center;
 }
 section {
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 0.5rem;
-	background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
 }
 .grid {
     display: grid;

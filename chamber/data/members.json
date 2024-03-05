@@ -9,7 +9,7 @@
             "phone": "123-456-7890",
             "email": "",
             "website": "https://www.example.com",
-            "logo": "../images/biz-logos/amazon.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/amazon.webp",
             "membership": "Platinum",
             "category": "Distribution & Logistics"
         },
@@ -22,7 +22,7 @@
             "phone": "623-555-7890",
             "email": "",
             "website": "https://rei.com",
-            "logo": "../images/biz-logos/rei-logo.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/rei-logo.webp",
             "membership": "Platinum",
             "category": "Distribution & Logistics"
         },
@@ -35,7 +35,7 @@
             "phone": "623-240-4300",
             "email": "",
             "website": "http://www.subzero-wolf.com/",
-            "logo": "../images/biz-logos/sub-zero-logo.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/sub-zero-logo.webp",
             "membership": "Platinum",
             "category": "Advanced Manufacturing"
         },
@@ -48,7 +48,7 @@
             "phone": "623-555-7999",
             "email": "",
             "website": "https://hellofresh.com",
-            "logo": "../images/biz-logos/hello-fresh-logo.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/hello-fresh-logo.webp",
             "membership": "Platinum",
             "category": "Advanced Manufacturing"
         },
@@ -61,7 +61,7 @@
             "phone": "623-555-9000",
             "email": "",
             "website": "https://galaxyinternational.com/",
-            "logo": "../images/biz-logos/galaxy-logo-blue.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/galaxy-logo-blue.webp",
             "membership": "Platinum",
             "category": "Aviation & Aerospace"
         },
@@ -74,7 +74,7 @@
             "phone": "623-492-2300",
             "email": "",
             "website": "https://sonorantechnology.com",
-            "logo": "../images/biz-logos/sonoran-technology.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/sonoran-technology.webp",
             "membership": "Platinum",
             "category": "Aviation & Aerospace"
         },
@@ -87,7 +87,7 @@
             "phone": "55-444-7766",
             "email": "",
             "website": "https://raytheon.com",
-            "logo": "../images/biz-logos/raytheon-emblem.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/raytheon-emblem.webp",
             "membership": "Platinum",
             "category": "Aviation & Aerospace"
         },
@@ -100,7 +100,7 @@
             "phone": "623-936-7131",
             "email": "",
             "website": "https://www.stotzequipment.com",
-            "logo": "../images/biz-logos/stotz-equipment.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/stotz-equipment.webp",
             "membership": "Platinum",
             "category": "Agriculture"
         },
@@ -113,7 +113,7 @@
             "phone": "623-399-4830",
             "email": "",
             "website": "https://moonvalleynurseries.com",
-            "logo": "../images/biz-logos/moonvalley_logo.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/moonvalley_logo.webp",
             "membership": "Platinum",
             "category": "Agriculture"
         },
@@ -126,7 +126,7 @@
             "phone": "623-936-1700",
             "email": "",
             "website": "https://www.rousseaufarming.com/",
-            "logo": "../images/biz-logos/rousseau-farms.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/rousseau-farms.webp",
             "membership": "Platinum",
             "category": "Agriculture"
         },
@@ -139,7 +139,7 @@
             "phone": "623-521-5588",
             "email": "",
             "website": "http://minihereford.net/",
-            "logo": "../images/biz-logos/heritage-farms-logo.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/heritage-farms-logo.webp",
             "membership": "Platinum",
             "category": "Agriculture"
         },
@@ -152,7 +152,7 @@
             "phone": "623-555-5333",
             "email": "",
             "website": "http://www.smithlawofficeaz.com/",
-            "logo": "../images/biz-logos/smith-law-group.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/smith-law-group.webp",
             "membership": "Platinum",
             "category": "Attorneys"
         },
@@ -165,7 +165,7 @@
             "phone": "623-555-2222",
             "email": "",
             "website": "https://www.hilgersorthodontics.com/",
-            "logo": "../images/biz-logos/hilgers-logo.webp",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/hilgers-logo.webp",
             "membership": "Platinum",
             "category": "Healthcare"
         }
