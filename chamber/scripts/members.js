@@ -70,7 +70,7 @@ const displayMembers = (members) => {
         logo.setAttribute("src", member.logo);
         logo.setAttribute("alt", `${member.company}-logo`);
         logo.setAttribute("loading", "lazy");
-        logo.setAttribute("width", "100");
+        logo.setAttribute("width", "75");
         logo.setAttribute("height", "auto");
 
         bizCard.appendChild(logo);

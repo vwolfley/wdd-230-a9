@@ -6,7 +6,7 @@
             "city": "Goodyear",
             "state": "AZ",
             "zip": "85395",
-            "phone": "123-456-7890",
+            "phone": "623-456-7890",
             "email": "",
             "website": "https://www.example.com",
             "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/amazon.webp",
@@ -180,7 +180,7 @@
             "website": "https://mlb.com",
             "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/cincinnati-reds.webp",
             "membership": "Platinum",
-            "category": "Healthcare"
+            "category": "Sports & Recreation"
         }
     ]
 }

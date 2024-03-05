@@ -338,7 +338,7 @@ main {
 
 /* *** Footer ************************************ */
 
-footer {
+footer section{
     background-color: var(--accent1-color);
     color: var(--text-color-secondary);
     padding: 30px 30px 20px 30px;
@@ -945,16 +945,8 @@ section a {
     text-align: center;
 }
 
-.grid img {
-    width: 100px;
-    height: auto;
-}
-
 .grid section > * {
     margin: 0.1rem;
-}
-.grid h3 {
-    /* font-weight: 400; */
 }
 
 .list {
