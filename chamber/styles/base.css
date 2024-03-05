@@ -15,6 +15,7 @@
     --accent4-color: #651717;
     --text-color-main: #020617;
     --text-color-secondary: #ffffff;
+    --list-gray: #cccdd0;
 
     /* change the values below to your chosen font(s) */
     --heading-font: "Raleway", sans-serif;
@@ -902,24 +903,36 @@ button.homeBtn {
 
 /*----------- Directory.html --------------*/
 #directory {
-    margin: 0 auto;
-    padding: 0.5rem;
-    max-width: 700px;
+    margin: 2rem;
+    position: relative;
 }
 
 .menu {
-    margin: 1rem auto;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
-    background-color: #bed;
+    background-color: var(--list-gray);
     text-align: center;
 }
 section {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
+    margin: 0.25rem;
+    padding: 0.35rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
+    color: var(--text-color-main);
+}
+section h3 {
+    font-size: 1.2rem;
+}
+
+section p {
+    font-size: 0.75rem;
+}
+
+section a {
+    font-size: 0.65rem;
+    color: var(--primary-color);
 }
 .grid {
     display: grid;
@@ -933,60 +946,42 @@ section {
 }
 
 .grid img {
-    border: 1px solid #fff;
+    width: 100px;
+    height: auto;
 }
 
 .grid section > * {
     margin: 0.1rem;
 }
 .grid h3 {
-	font-family: "Caveat", cursive;
+    /* font-weight: 400; */
 }
 
 .list {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .list section {
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
-	margin: 0;
-	padding: 0.25rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-self: left;
+    margin: 0;
+    padding: 0.25rem;
 }
 
 .list section > * {
-	margin: 0 1rem;
+    margin: 0 1rem;
 }
 
 .list section img {
-	display: none;
+    display: none;
 }
 
 .list section h3 {
-	font-size: 1rem;
+    font-size: 0.75rem;
 }
 
 .list section:nth-child(even) {
-	background-color: #bed;
-}
-
-section h3 {
-	font-size: 1.5rem;
-}
-
-section p {
-	font-weight: 600;
-	font-size: smaller;
-}
-
-section a {
-	font-size: 0.85rem;
-	color: navy;
-	letter-spacing: 1.1pt;
-}
-
-img {
-	height: 100px;
-	max-width: 100%;
+    background-color: #e5e6e7;
 }

@@ -168,6 +168,19 @@
             "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/hilgers-logo.webp",
             "membership": "Platinum",
             "category": "Healthcare"
+        },
+        {
+            "company": "Cincinnati Reds Spring Training Facility",
+            "address": "13125 S Wood Blvd",
+            "city": "Goodyear",
+            "state": "AZ",
+            "zip": "85338",
+            "phone": "623-555-6590",
+            "email": "",
+            "website": "https://mlb.com",
+            "logo": "https://vwolfley.github.io/wdd230/chamber/images/biz-logos/cincinnati-reds.webp",
+            "membership": "Platinum",
+            "category": "Healthcare"
         }
     ]
 }

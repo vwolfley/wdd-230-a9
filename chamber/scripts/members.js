@@ -57,7 +57,9 @@ const displayMembers = (members) => {
         const companyName = document.createElement("h3");
         companyName.textContent = member.company;
         const address = document.createElement("p");
+        const address2 = document.createElement("p");
         address.textContent = member.address;
+        address2.textContent = `${member.city}, ${member.state} ${member.zip}`;
         const phone = document.createElement("p");
         phone.textContent = member.phone;
         const website = document.createElement("a");
@@ -68,12 +70,13 @@ const displayMembers = (members) => {
         logo.setAttribute("src", member.logo);
         logo.setAttribute("alt", `${member.company}-logo`);
         logo.setAttribute("loading", "lazy");
-        logo.setAttribute("width", "auto");
-        logo.setAttribute("height", "100");
+        logo.setAttribute("width", "100");
+        logo.setAttribute("height", "auto");
 
         bizCard.appendChild(logo);
         bizCard.appendChild(companyName);
         bizCard.appendChild(address);
+        bizCard.appendChild(address2);
         bizCard.appendChild(phone);
         bizCard.appendChild(website);
 
