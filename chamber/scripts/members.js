@@ -63,7 +63,7 @@ const displayMembers = (members) => {
         const phone = document.createElement("p");
         phone.textContent = member.phone;
         const website = document.createElement("a");
-        website.setAttribute("href", member.website);
+        website.setAttribute("href", `https://${member.website}`);
         website.textContent = member.website;
 
         const logo = document.createElement("img");
