@@ -697,7 +697,6 @@ footer section{
         "header"
         "form"
         "membership";
-    background-color: var(--accent2-color);
     color: var(--text-color-main);
     margin: 0 20px;
 }
@@ -743,7 +742,6 @@ form {
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: var(--accent2-color);
     border: solid 1px #999;
     border-radius: 4px;
 }
