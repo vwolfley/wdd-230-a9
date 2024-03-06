@@ -1,4 +1,4 @@
-if (window.location.pathname === "../chamber/thankyou.html") {
+if (window.location.pathname === "/wdd230/chamber/thankyou.html") {
     timeStamp();
 }
 
