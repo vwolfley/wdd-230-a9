@@ -1,19 +1,19 @@
-if (window.location.pathname === "../chamber/index.html") {
+if (window.location.pathname === "/wdd230/chamber/index.html") {
     getCopyrightYear();
     getLastModified();
 }
-if (window.location.pathname === "../chamber/directory.html") {
+if (window.location.pathname === "/wdd230/chamber/directory.html") {
     getCopyrightYear();
     getLastModified();
 }
 
-if (window.location.pathname === "../chamber/discovery.html") {
+if (window.location.pathname === "/wdd230/chamber/discovery.html") {
     getCopyrightYear();
     getLastModified();
     // Call the function to update the page visits counter
     updatePageVisitsCounter();
 }
-if (window.location.pathname === "../chamber/join.html") {
+if (window.location.pathname === "/wdd230/chamber/join.html") {
     getCopyrightYear();
     getLastModified();
 }
