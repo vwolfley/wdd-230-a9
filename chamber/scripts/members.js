@@ -1,27 +1,3 @@
-// Display the copyright year
-function getCopyrightYear() {
-    const year = new Date().getFullYear();
-    return `&copy; ${year}`;
-}
-document.getElementById("cYear").innerHTML = getCopyrightYear();
-
-// Display the last modified date of the page
-function getLastModified() {
-    const lastModified = new Date(document.lastModified).toGMTString();
-    return `Last Modified: ${lastModified}`;
-}
-document.getElementById("lastModified").innerHTML = getLastModified();
-
-// Toggle Dark/Light Mode
-function screenMode() {
-    const element = document.body;
-    element.classList.toggle("dark-mode");
-
-    const sections = document.querySelectorAll("div.info, div.spotlights, div.event, article.card, div.weather-info, div.form-wrapper");
-    sections.forEach((section) => {
-        section.classList.toggle("dark-mode");
-    });
-}
 
 /* ****************************************************
     Directory of Members
@@ -29,7 +5,7 @@ function screenMode() {
 const baseURL = "https://vwolfley.github.io/wdd230/";
 const dataURL = "https://vwolfley.github.io/wdd230/chamber/data/members.json";
 
-const cards = document.querySelector("#members");
+
 
 async function getMembers() {
     try {
@@ -49,7 +25,8 @@ async function getMembers() {
 getMembers();
 
 const displayMembers = (members) => {
-    console.log(members);
+    // console.log(members);
+    const cards = document.querySelector("#members");
 
     members.forEach((member) => {
         // // console.log(week);

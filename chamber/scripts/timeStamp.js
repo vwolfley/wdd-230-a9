@@ -1,3 +1,7 @@
+if (window.location.pathname === "/chamber/thankyou.html") {
+    timeStamp();
+}
+
 function timeStamp() {
     // Get the current date and time
     var now = new Date();
@@ -18,7 +22,7 @@ function timeStamp() {
     // Display the timestamp
     document.getElementById("timestamp").innerText = `Timestamp: ${timestamp}`;
 }
-timeStamp();
+
 
 // Function to set value of hidden input field with current date/time in milliseconds
 function setTimestamp() {

@@ -1,16 +1,35 @@
+if (window.location.pathname === "/chamber/index.html") {
+    getCopyrightYear();
+    getLastModified();
+}
+if (window.location.pathname === "/chamber/directory.html") {
+    getCopyrightYear();
+    getLastModified();
+}
+
+if (window.location.pathname === "/chamber/discovery.html") {
+    getCopyrightYear();
+    getLastModified();
+    // Call the function to update the page visits counter
+    updatePageVisitsCounter();
+}
+if (window.location.pathname === "/chamber/join.html") {
+    getCopyrightYear();
+    getLastModified();
+}
+console.log("Path: " + window.location.pathname);
+
 // Display the copyright year
 function getCopyrightYear() {
     const year = new Date().getFullYear();
-    return `&copy; ${year}`;
+    document.getElementById("cYear").innerHTML = `&copy; ${year}`;
 }
-document.getElementById("cYear").innerHTML = getCopyrightYear();
 
 // Display the last modified date of the page
 function getLastModified() {
     const lastModified = new Date(document.lastModified).toGMTString();
-    return `Last Modified: ${lastModified}`;
+    document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModified}`;
 }
-document.getElementById("lastModified").innerHTML = getLastModified();
 
 // Toggle Dark/Light Mode
 function screenMode() {
@@ -55,8 +74,6 @@ function updatePageVisitsCounter() {
     // console.log("Time Difference: " + timeDifference);
     // console.log("Days Difference: " + daysDifference);
 }
-// Call the function to update the page visits counter
-updatePageVisitsCounter();
 
 function testUpdatePageVisitsCounter() {
     // Set a fake previous visit date for testing purposes
