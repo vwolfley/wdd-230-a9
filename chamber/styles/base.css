@@ -907,28 +907,38 @@ button.homeBtn {
 
 .menu {
     padding: 0.5rem;
-    background-color: var(--list-gray);
     text-align: center;
 }
-section {
+.menu button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent3-color);
+    color: var(--text-color-secondary);
+    cursor: pointer;
+}
+.member {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 0.25rem;
     padding: 0.35rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
     color: var(--text-color-main);
+    height: 310px;
 }
-section h3 {
+.member h3 {
     font-size: 1.2rem;
 }
 
-section p {
+.member p {
     font-size: 0.75rem;
 }
 
-section a {
+.member a {
     font-size: 0.65rem;
     color: var(--primary-color);
 }
