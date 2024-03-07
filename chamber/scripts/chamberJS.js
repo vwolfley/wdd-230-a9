@@ -17,7 +17,7 @@ if (window.location.pathname === "/wdd230/chamber/join.html") {
     getCopyrightYear();
     getLastModified();
 }
-console.log("Path: " + window.location.pathname);
+// console.log("Path: " + window.location.pathname);
 
 // Display the copyright year
 function getCopyrightYear() {

@@ -904,6 +904,11 @@ button.homeBtn {
     margin: 2rem;
     position: relative;
 }
+#directory h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
 
 .menu {
     padding: 0.5rem;

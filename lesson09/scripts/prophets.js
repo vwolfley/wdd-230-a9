@@ -16,11 +16,10 @@ async function getProphetData() {
         throw error;
     }
 }
-
 getProphetData();
 
 const displayProphets = (prophets) => {
-    console.log(prophets);
+    // console.log(prophets);
     prophets.forEach((prophet) => {
         // Create a section element and store it in a variable named card
         const card = document.createElement("section");
