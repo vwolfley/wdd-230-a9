@@ -298,3 +298,20 @@ footer .social img {
     gap: 10px;
 }
 
+/* Weather Article ********************************* */
+
+#weather h4 {
+    margin: 0;
+    padding: 15px;
+    background-color: orange;
+    color: white;
+    text-transform: uppercase;
+}
+#weather div {
+    text-align: center;
+    padding: 15px;
+    background-color: #f8fafc;
+}
+#weather p {
+    margin: 0;
+}

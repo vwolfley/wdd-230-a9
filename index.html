@@ -87,8 +87,21 @@
                         <h3>Information</h3>
                     </div>
                     <div class="card-content">
-                        <div>Location</div>
-                        <div>Weather</div>
+                        <article id="weather">
+                            <h4>Weather Right Now</h4>
+                            <div>
+                                <p id="location"></p>
+                                <figure>
+                                    <img src="" alt="" id="weather-icon" />
+                                    <figcaption id="weather-description"></figcaption>
+                                    <span id="current-temp"></span>
+                                </figure>
+                                <p>Feels Like: <span id="feels-like"></span></p>
+                                <p>Wind: <span id="wind-speed"></span></p>
+                                <p>Humidity: <span id="humidity"></span></p>
+                            </div>
+                        </article>
+
                         <div>Number of Visits: <span class="visits"></span></div>
                     </div>
                 </section>
@@ -129,5 +142,6 @@
         </footer>
         <script src="scripts/getdates.js"></script>
         <script src="scripts/links.js"></script>
+        <script src="scripts/weather.js"></script>
     </body>
 </html>
