@@ -89,17 +89,19 @@
                     <div class="card-content">
                         <article id="weather">
                             <h4>Weather Right Now</h4>
-                            <div>
                                 <p id="location"></p>
-                                <figure>
-                                    <img src="" alt="" id="weather-icon" />
+                                <div class="temp-area">
+                                    <figure>
+                                        <img src="" alt="" id="weather-icon" />
+                                        <span id="current-temp"></span>
+                                    </figure>
                                     <figcaption id="weather-description"></figcaption>
-                                    <span id="current-temp"></span>
-                                </figure>
-                                <p>Feels Like: <span id="feels-like"></span></p>
-                                <p>Wind: <span id="wind-speed"></span></p>
-                                <p>Humidity: <span id="humidity"></span></p>
-                            </div>
+                                </div>
+                                <div class="alt-weather">
+                                    <div class="weather-box">Feels Like:<span id="feels-like"></span></div>
+                                    <div class="weather-box">Wind:<span id="wind-speed"></span></div>
+                                    <div class="weather-box">Humidity:<span id="humidity"></span></div>
+                                </div>
                         </article>
 
                         <div>Number of Visits: <span class="visits"></span></div>

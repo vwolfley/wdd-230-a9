@@ -42,9 +42,9 @@ function displayResults(data) {
     // Format temperature to show zero decimal points
     const formattedTemp = data.main.temp.toFixed(0);
     // Display current temperature
-    currentTemp.innerHTML = `${formattedTemp} &deg;F`;
-    feelsLike.innerHTML = `${data.main.feels_like.toFixed(0)} &deg;F`;
-    windSpeed.innerHTML = `${data.wind.speed} mph`;
+    currentTemp.innerHTML = `${formattedTemp}&deg;F`;
+    feelsLike.innerHTML = `${data.main.feels_like.toFixed(0)}&deg;F`;
+    windSpeed.innerHTML = `${data.wind.speed.toFixed(0)}mph`;
     humidity.innerHTML = `${data.main.humidity}%`;
 
     // Display weather icon and description
