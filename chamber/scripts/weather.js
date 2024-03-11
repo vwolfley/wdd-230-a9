@@ -76,12 +76,12 @@ function displayWeatherResults(data) {
 }
 
 function displayForecastResults(data) {
-    // console.log(data);
+    console.log(data);
 
     const fiveDayResults = data.list
         .filter((fc) => fc.dt_txt.includes("21:00:00"))
         .map((fc) => {
-            console.log(fc);
+            // console.log(fc);
             // Unix timestamp in UTC
             const timestamp = fc.dt * 1000;
 

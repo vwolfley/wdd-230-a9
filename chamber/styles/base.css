@@ -1064,14 +1064,14 @@ button.homeBtn {
 }
 #forecast .weather-day:not(:last-child) {
     border-bottom: 1px solid black;
-  }
+}
 .weather-day h5 {
     /* font-size: 1.2rem; */
     font-weight: 800;
     text-transform: uppercase;
 }
 .weather-day figcaption {
-    font-size: .7rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
 }
 #forecast figure {
@@ -1087,10 +1087,39 @@ button.homeBtn {
     align-items: center;
 }
 .temp-div p {
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin: 0;
 }
 .temp-div p:nth-last-child(1) {
     font-size: 1.2rem;
     font-weight: 800;
+}
+
+/* Banner on home page */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    color: var(--text-color-secondary);
+    padding: 30px;
+    margin-top: 2rem;
+    text-align: center;
+}
+.banner-hide {
+    display: none;
+}
+
+.banner p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+#closeBanner {
+    background: none;
+    color: var(--text-color-secondary);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: x-large;
+    /* margin-top: 5px; */
 }
