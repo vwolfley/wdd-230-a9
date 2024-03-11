@@ -129,17 +129,27 @@
                 <section class="weather">
                     <h2>Local Weather</h2>
                     <div class="weather-info">
-                        <div class="weather-icon">
-                            <img src="images/weather/sunny.webp" alt="sunny" />
-                        </div>
-                        <div class="weather-data">
-                            <h3>Currently</h3>
-                            <p>Sunny</p>
-                            <p>Temp: <span id="temp"></span>&deg;F</p>
-                            <p>Humidity: 20%</p>
-                            <p>Wind: <span id="wind-speed"></span>mph</p>
-                            <p>Wind Chill: <span id="wind-chill"></span></p>
-                        </div>
+                        <article id="weather">
+                            <h4>Weather Right Now</h4>
+                            <p id="location"></p>
+                            <div class="temp-area">
+                                <figure>
+                                    <img src="" alt="" id="weather-icon" />
+                                    <span id="current-temp"></span>
+                                </figure>
+                                <figcaption id="weather-description"></figcaption>
+                            </div>
+                            <div class="alt-weather">
+                                <div class="weather-box">Feels Like:<span id="feels-like"></span></div>
+                                <div class="weather-box">Humidity:<span id="humidity"></span></div>
+                                <div class="weather-box">Wind:<span id="wind-speed"></span></div>
+                                <div class="weather-box">Wind Chill:<span id="wind-chill"></span></div>
+                            </div>
+                        </article>
+                        <article id="five-day">
+                            <h4>Five Day Forecast</h4>
+                            <div id="forecast"></div>
+                        </article>
                     </div>
                 </section>
             </div>
@@ -247,5 +257,6 @@
         <!-- /Footer  -->
         <script src="scripts/chamberJS.js"></script>
         <script src="scripts/windchill.js"></script>
+        <script src="scripts/weather.js"></script>
     </body>
 </html>

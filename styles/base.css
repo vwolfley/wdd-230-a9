@@ -206,6 +206,10 @@ iframe {
 .card-content {
     padding: 20px;
 }
+.card-content div{
+    margin: 0 0 10px 0;
+
+}
 
 .la-card {
     list-style-type: none;

@@ -323,7 +323,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px 150px;
+    padding: 50px 50px;
     background-color: lightgrey;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -338,7 +338,7 @@ main {
 
 /* *** Footer ************************************ */
 
-footer section{
+footer section {
     background-color: var(--accent1-color);
     color: var(--text-color-secondary);
     padding: 30px 30px 20px 30px;
@@ -988,4 +988,109 @@ button.homeBtn {
 
 .list section:nth-child(even) {
     background-color: #e5e6e7;
+}
+
+/* Weather Article ********************************* */
+
+#weather {
+    width: 100%;
+}
+#weather h4,
+#five-day h4 {
+    margin: 0;
+    padding: 15px;
+    background-color: orange;
+    color: white;
+    text-transform: uppercase;
+}
+
+#weather p {
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+.temp-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#current-temp {
+    font-size: 3em;
+    font-weight: 800;
+}
+.temp-area figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+#weather-description {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.alt-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 5px;
+}
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 15px;
+    /* border: 1px solid var(--accent3-color); */
+    font-size: 0.8rem;
+}
+.weather-box span {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+#five-day {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#forecast .weather-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    /* margin: 20px 0; */
+}
+#forecast .weather-day:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+.weather-day h5 {
+    /* font-size: 1.2rem; */
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.weather-day figcaption {
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+#forecast figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.temp-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.temp-div p {
+    font-size: .8rem;
+    margin: 0;
+}
+.temp-div p:nth-last-child(1) {
+    font-size: 1.2rem;
+    font-weight: 800;
 }
