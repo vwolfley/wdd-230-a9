@@ -1,11 +1,11 @@
 // Testing:
-let temperature = 34; // Temperature in Fahrenheit
-let windSpeed = 20; // Wind speed in mph
+// let temperature = 34; // Temperature in Fahrenheit
+// let windSpeed = 20; // Wind speed in mph
 
 
-function calculateWindChill(temperature, windSpeed) {
-    document.getElementById("temp").innerHTML = temperature;
-    document.getElementById("wind-speed").innerHTML = windSpeed;
+function calculateWindChill() {
+    const temperature = document.getElementById("current-temp").innerHTML;
+    const windSpeed = document.getElementById("wind-speed").innerHTML;
 
     let windChill;
     // Check if the temperature and wind speed  are valid
@@ -22,6 +22,6 @@ function calculateWindChill(temperature, windSpeed) {
 
     // console.log("Wind Chill Factor: " + windChill);
 }
-calculateWindChill(temperature, windSpeed);
+calculateWindChill();
 
 
