@@ -126,6 +126,8 @@ function displayForecastResults(data) {
         const iconsrc = `https://openweathermap.org/img/wn/${day.weatherIcon}.png`;
         weatherIcon.setAttribute("src", iconsrc);
         weatherIcon.setAttribute("alt", day.weatherDesc);
+        weatherIcon.setAttribute("width", "50");
+        weatherIcon.setAttribute("height", "50");
         weatherCaption.innerHTML = `${day.weatherDesc}`;
         // Make a div for max and min temp
         weatherDay.appendChild(maxTempDiv);

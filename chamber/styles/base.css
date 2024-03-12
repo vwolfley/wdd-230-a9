@@ -47,9 +47,9 @@ html,
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
+    /* min-height: 100vh; */
+    /* height: 100%;
+    width: 100%; */
     margin: 0;
     padding: 0;
     font-family: var(--paragraph-font);
@@ -530,8 +530,8 @@ footer section {
 
 .wrapper {
     display: grid;
-    background-color: #fff;
-    color: #444;
+    /* background-color: #fff;
+    color: #444; */
 }
 .picture {
     display: flex;
@@ -618,7 +618,6 @@ footer section {
     padding: 20px;
 }
 .style5 {
-    /* background-color: rgba(3, 105, 161, 0.2); */
     background-color: #f8fafc;
     color: var(--text-color-main);
     padding: 20px;
@@ -712,6 +711,10 @@ footer section {
     color: var(--text-color-main);
     margin: 0 20px;
 }
+.form-wrapper.dark-mode {
+    background-color: #1e293b;
+    color: var(--text-color-secondary);
+}
 .header {
     grid-area: header;
     place-self: center;
@@ -792,6 +795,9 @@ form fieldset {
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 0.5rem 2%;
+}
+form fieldset .dark-mode {
+    border: 1px solid var(--text-color-secondary);
 }
 form fieldset:last-of-type {
     margin-bottom: 5px;
@@ -947,6 +953,14 @@ button.homeBtn {
     color: var(--text-color-main);
     height: 310px;
 }
+.member.dark-mode {
+    background-color: #1e293b;
+    color: var(--text-color-secondary);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+}
+.member.dark-mode img{
+    background-color:var(--text-color-secondary);
+}
 .member h3 {
     font-size: 1.2rem;
 }
@@ -1007,8 +1021,8 @@ button.homeBtn {
 #weather {
     width: 100%;
 }
-#weather h4,
-#five-day h4 {
+#weather h3,
+#five-day h3 {
     margin: 0;
     padding: 15px;
     background-color: orange;
