@@ -76,7 +76,7 @@ function displayWeatherResults(data) {
 }
 
 function displayForecastResults(data) {
-    console.log(data);
+    // console.log(data);
 
     const fiveDayResults = data.list
         .filter((fc) => fc.dt_txt.includes("21:00:00"))
@@ -96,7 +96,7 @@ function displayForecastResults(data) {
                 precipChance: fc.pop,
             };
         });
-    console.log(fiveDayResults);
+    // console.log(fiveDayResults);
 
     const forecast = document.querySelector("#forecast");
 

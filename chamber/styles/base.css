@@ -258,7 +258,7 @@ main {
 .spotlights {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 30px 0;
 }
 
 .cards {
@@ -288,7 +288,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    padding: 50px;
+    padding: 30px 0 30px 0;
 }
 
 .events {
@@ -686,6 +686,18 @@ footer section {
     margin: 0;
 }
 
+.biz-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.biz-images img {
+    width: 100px;
+    height: auto;
+}
+
 /*----------- FORM Page --------------*/
 
 .form-wrapper {
@@ -1000,7 +1012,7 @@ button.homeBtn {
     margin: 0;
     padding: 15px;
     background-color: orange;
-    color: white;
+    color: var(--text-color-main);
     text-transform: uppercase;
 }
 

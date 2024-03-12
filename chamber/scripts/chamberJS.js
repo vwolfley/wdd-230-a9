@@ -1,19 +1,20 @@
-if (window.location.pathname === "/wdd230/chamber/index.html") {
+if (window.location.pathname === "/wdd230/chamber/index.html" || window.location.pathname === "/chamber/index.html") {
     getCopyrightYear();
     getLastModified();
+    initBanner();
 }
-if (window.location.pathname === "/wdd230/chamber/directory.html") {
+if (window.location.pathname === "/wdd230/chamber/directory.html" || window.location.pathname === "/chamber/directory.html") {
     getCopyrightYear();
     getLastModified();
 }
 
-if (window.location.pathname === "/wdd230/chamber/discovery.html") {
+if (window.location.pathname === "/wdd230/chamber/discovery.html" || window.location.pathname === "/chamber/discovery.html") {
     getCopyrightYear();
     getLastModified();
     // Call the function to update the page visits counter
     updatePageVisitsCounter();
 }
-if (window.location.pathname === "/wdd230/chamber/join.html") {
+if (window.location.pathname === "/wdd230/chamber/join.html" || window.location.pathname === "/chamber/join.html") {
     getCopyrightYear();
     getLastModified();
 }
@@ -106,7 +107,7 @@ function testUpdatePageVisitsCounter() {
 // testUpdatePageVisitsCounter();
 
 // ********* Banner *********
-document.addEventListener("DOMContentLoaded", function initBanner() {
+function initBanner() {
     var banner = document.getElementById("banner");
     var closeBannerBtn = document.getElementById("closeBanner");
 
@@ -124,4 +125,4 @@ document.addEventListener("DOMContentLoaded", function initBanner() {
     closeBannerBtn.addEventListener("click", function () {
         banner.classList.add("banner-hide");
     });
-});
+}
