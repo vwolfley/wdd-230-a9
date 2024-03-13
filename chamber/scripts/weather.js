@@ -14,6 +14,8 @@ const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&l
 
 const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
+const urlOpenWeather = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude={hourly,minutely,alerts}&appid=${apiKey}`;
+
 async function apiFetchWeather(url) {
     try {
         const response = await fetch(url);
@@ -36,7 +38,7 @@ async function apiFetchForecast(url) {
         if (response.ok) {
             const data = await response.json();
             // console.log(data);
-            displayForecastResults(data);
+            // displayForecastResults(data);
         } else {
             throw new Error(await response.text());
         }
@@ -44,7 +46,23 @@ async function apiFetchForecast(url) {
         console.error(error);
     }
 }
-apiFetchForecast(urlForecast);
+// apiFetchForecast(urlForecast);
+
+async function apiFetchOpenWeather(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            // console.log(data);
+            displayOneCallResults(data);
+        } else {
+            throw new Error(await response.text());
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+apiFetchOpenWeather(urlOpenWeather);
 
 function displayWeatherResults(data) {
     // console.log(data);
@@ -141,6 +159,64 @@ function displayForecastResults(data) {
         minTempT.textContent = `Low:`;
         minTempDiv.appendChild(minTemp);
         minTemp.innerHTML = `${day.minTemp.toFixed(0)}&deg;F`;
+
+        forecast.appendChild(weatherDay);
+    });
+}
+
+function displayOneCallResults(data) {
+    console.log(data.daily);
+
+    const results = data.daily;
+   
+    const dailyResults = results.slice(0, 5);
+
+    const forecast = document.querySelector("#forecast");
+
+    dailyResults.forEach((day) => {
+        const timestamp = day.dt * 1000;
+        let weekday = dayOfTheWeek(timestamp);
+
+        const weatherDay = document.createElement("div");
+        weatherDay.setAttribute("class", "weather-day");
+        const weekDay = document.createElement("h5");
+        const weatherFigure = document.createElement("figure");
+        const weatherCaption = document.createElement("figcaption");
+        const weatherIcon = document.createElement("img");
+        const maxTempDiv = document.createElement("div");
+        const minTempDiv = document.createElement("div");
+        maxTempDiv.setAttribute("class", "temp-div");
+        minTempDiv.setAttribute("class", "temp-div");
+        const maxTempT = document.createElement("p");
+        const minTempT = document.createElement("p");
+        const maxTemp = document.createElement("p");
+        const minTemp = document.createElement("p");
+        // Make a div for each day
+        weatherDay.appendChild(weekDay);
+        weekDay.textContent = weekday;
+        // Make icon and description a figure
+        weatherDay.appendChild(weatherFigure);
+        weatherFigure.appendChild(weatherIcon);
+        weatherFigure.appendChild(weatherCaption);
+
+        const iconsrc = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`;
+        weatherIcon.setAttribute("src", iconsrc);
+        weatherIcon.setAttribute("alt", day.weather[0].description);
+        weatherIcon.setAttribute("width", "50");
+        weatherIcon.setAttribute("height", "50");
+        weatherCaption.innerHTML = `${day.weather[0].description}`;
+        // Make a div for max and min temp
+        weatherDay.appendChild(maxTempDiv);
+        maxTempDiv.appendChild(maxTempT);
+        maxTempT.textContent = `High:`;
+        maxTempDiv.appendChild(maxTemp);
+        maxTemp.innerHTML = `${day.temp.max.toFixed(0)}&deg;F`;
+
+        weatherDay.appendChild(minTempDiv);
+        minTempDiv.appendChild(minTempT);
+        minTempT.textContent = `Low:`;
+        minTempDiv.appendChild(minTemp);
+        minTemp.innerHTML = `${day.temp.min.toFixed(0)}&deg;F`;
 
         forecast.appendChild(weatherDay);
     });
