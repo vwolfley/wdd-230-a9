@@ -67,12 +67,20 @@ apiFetchOpenWeather(urlOpenWeather);
 function displayWeatherResults(data) {
     // console.log(data);
     const location = document.querySelector("#location");
-    const currentTemp = document.querySelector("#current-temp");
-    const weatherIcon = document.querySelector("#weather-icon");
+    const tempArea = document.querySelector(".temp-area");
+    // const currentTemp = document.querySelector("#current-temp");
+
     const captionDesc = document.querySelector("#weather-description");
     const feelsLike = document.querySelector("#feels-like");
     const windSpeed = document.querySelector("#wind-speed");
     const humidity = document.querySelector("#humidity");
+
+    const weatherIcon = document.createElement("img");
+    tempArea.appendChild(weatherIcon);
+
+    const currentTemp = document.createElement("span");
+    currentTemp.setAttribute("id", "current-temp");
+    tempArea.appendChild(currentTemp);
 
     location.innerHTML = data.name;
     // Format temperature to show zero decimal points
@@ -89,6 +97,8 @@ function displayWeatherResults(data) {
         let desc = weatherEvent.description;
         weatherIcon.setAttribute("src", iconsrc);
         weatherIcon.setAttribute("alt", desc);
+        weatherIcon.setAttribute("width", "100");
+        weatherIcon.setAttribute("height", "100");
         captionDesc.innerHTML = `${desc}`;
     });
 }
@@ -168,7 +178,7 @@ function displayOneCallResults(data) {
     // console.log(data.daily);
 
     const results = data.daily;
-   
+
     const dailyResults = results.slice(0, 5);
 
     const forecast = document.querySelector("#forecast");
