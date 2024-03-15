@@ -165,7 +165,7 @@ function displayForecastResults(data) {
 }
 
 function displayOneCallResults(data) {
-    console.log(data.daily);
+    // console.log(data.daily);
 
     const results = data.daily;
    
@@ -198,6 +198,7 @@ function displayOneCallResults(data) {
         weatherDay.appendChild(weatherFigure);
         weatherFigure.appendChild(weatherIcon);
         weatherFigure.appendChild(weatherCaption);
+        // if(day.weather[0].icon === "01d" || day.weather[0].icon === "01n") {
 
         const iconsrc = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`;
         weatherIcon.setAttribute("src", iconsrc);

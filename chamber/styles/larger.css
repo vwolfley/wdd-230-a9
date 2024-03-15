@@ -9,11 +9,16 @@
     }
 
     form label.sbs {
-        padding: .4rem 0;
-      }
-      .nav-info input {
+        padding: 0.4rem 0;
+    }
+    .nav-info input {
         display: none;
     }
+    .list section {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "title address1 address2 phone email";
+    }
+
 }
 
 /* Tailwind Breakpoints */

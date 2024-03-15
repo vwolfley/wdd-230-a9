@@ -958,8 +958,8 @@ button.homeBtn {
     color: var(--text-color-secondary);
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
 }
-.member.dark-mode img{
-    background-color:var(--text-color-secondary);
+.member.dark-mode img {
+    background-color: var(--text-color-secondary);
 }
 .member h3 {
     font-size: 1.2rem;
@@ -995,9 +995,13 @@ button.homeBtn {
 
 .list section {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "title phone"
+        "address1 email"
+        "address2 .";
     margin: 0;
-    height: 35px;
+    height: auto;
 }
 
 .list section > * {
@@ -1010,6 +1014,19 @@ button.homeBtn {
 
 .list section h3 {
     font-size: 0.75rem;
+    grid-area: title;
+}
+.list section p:nth-of-type(1) {
+    grid-area: address1;
+}
+.list section p:nth-of-type(2) {
+    grid-area: address2;
+}
+.list section p:nth-of-type(3) {
+    grid-area: phone;
+}
+.list section a {
+    grid-area: email;
 }
 
 .list section:nth-child(even) {
