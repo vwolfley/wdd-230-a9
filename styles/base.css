@@ -320,9 +320,15 @@ footer .social img {
     margin: 10px 0 0 0;
     text-align: center;
 }
-.temp-area {
+#weather figure {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.temp-area {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 #current-temp {

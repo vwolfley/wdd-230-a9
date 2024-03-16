@@ -2,13 +2,13 @@
 // https://openweathermap.org/weathermap
 // API key: 0aec6412eede92415f476e7030db63f4
 const apiKey = "0aec6412eede92415f476e7030db63f4";
-// AVONDALE ARIZONA 
+// AVONDALE ARIZONA
 // 33.44450069074283, -112.35577444568536
 // Litchfield Park Arizona
 // 33.49531346879897, -112.35600589274492
 
 const lat = 33.495313;
-const lon = -112.35600;  
+const lon = -112.356;
 
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
@@ -29,14 +29,21 @@ async function apiFetch() {
 apiFetch();
 
 function displayResults(data) {
-    const location =    document.querySelector("#location");
-    const currentTemp = document.querySelector("#current-temp");
-    const weatherIcon = document.querySelector("#weather-icon");
-    const captionDesc = document.querySelector("#weather-description");
-    const feelsLike =   document.querySelector("#feels-like");
-    const windSpeed =   document.querySelector("#wind-speed");
-    const humidity =    document.querySelector("#humidity");
+    const location = document.querySelector("#location");
 
+    const tempArea = document.querySelector(".temp-area");
+
+    const captionDesc = document.querySelector("#weather-description");
+    const feelsLike = document.querySelector("#feels-like");
+    const windSpeed = document.querySelector("#wind-speed");
+    const humidity = document.querySelector("#humidity");
+
+    const weatherIcon = document.createElement("img");
+    tempArea.appendChild(weatherIcon);
+
+    const currentTemp = document.createElement("span");
+    currentTemp.setAttribute("id", "current-temp");
+    tempArea.appendChild(currentTemp);
 
     location.innerHTML = data.name;
     // Format temperature to show zero decimal points
@@ -53,7 +60,8 @@ function displayResults(data) {
         let desc = weatherEvent.description;
         weatherIcon.setAttribute("src", iconsrc);
         weatherIcon.setAttribute("alt", desc);
+        weatherIcon.setAttribute("width", "100");
+        weatherIcon.setAttribute("height", "100");
         captionDesc.innerHTML = `${desc}`;
     });
 }
-
