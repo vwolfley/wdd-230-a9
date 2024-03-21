@@ -78,17 +78,18 @@ function displayWeatherResults(data) {
     const weatherIcon = document.createElement("img");
     tempArea.appendChild(weatherIcon);
 
-    const currentTemp = document.createElement("span");
+    const currentTemp = document.createElement("div");
     currentTemp.setAttribute("id", "current-temp");
     tempArea.appendChild(currentTemp);
 
     location.innerHTML = data.name;
     // Format temperature to show zero decimal points
     const formattedTemp = data.main.temp.toFixed(0);
+    const formattedWindSpeed = data.wind.speed.toFixed(0);
     // Display current temperature
     currentTemp.innerHTML = `${formattedTemp}&deg;F`;
     feelsLike.innerHTML = `${data.main.feels_like.toFixed(0)}&deg;F`;
-    windSpeed.innerHTML = `${data.wind.speed.toFixed(0)}mph`;
+    windSpeed.innerHTML = `${formattedWindSpeed}mph`;
     humidity.innerHTML = `${data.main.humidity}%`;
 
     // Display weather icon and description
@@ -101,6 +102,7 @@ function displayWeatherResults(data) {
         weatherIcon.setAttribute("height", "100");
         captionDesc.innerHTML = `${desc}`;
     });
+    calculateWindChill(formattedTemp, formattedWindSpeed);
 }
 
 function displayForecastResults(data) {

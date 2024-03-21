@@ -126,3 +126,41 @@ function initBanner() {
         banner.classList.add("banner-hide");
     });
 }
+
+// ********* Spotlight Members *********
+function displaySpotlightMembers() {
+    const members = [
+        {
+            name: "Linda",
+            image: "images/linda.jpg",
+            alt: "Linda",
+            bio: "Linda is a dedicated member of the Chamber. She is always ready to help and support the community."
+        },
+        {
+            name: "John",
+            image: "images/john.jpg",
+            alt: "John",
+            bio: "John is a dedicated member of the Chamber. He is always ready to help and support the community."
+        },
+        {
+            name: "Jane",
+            image: "images/jane.jpg",
+            alt: "Jane",
+            bio: "Jane is a dedicated member of the Chamber. She is always ready to help and support the community."
+        }
+    ];
+
+    const spotlights = document.querySelector(".spotlights");
+    members.forEach((member) => {
+        const card = document.createElement("article");
+        card.classList.add("card");
+        card.innerHTML = `
+        <img src="${member.image}" alt="${member.alt}">
+        <div class="info">
+            <h3>${member.name}</h3>
+            <p>${member.bio}</p>
+        </div>
+        `;
+        spotlights.appendChild(card);
+    });
+}
