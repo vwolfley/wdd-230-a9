@@ -1,4 +1,5 @@
 if (window.location.pathname === "/wdd230/chamber/index.html" || window.location.pathname === "/chamber/index.html") {
+    getSpotLightMembers();
     getCopyrightYear();
     getLastModified();
     initBanner();
@@ -37,7 +38,9 @@ function screenMode() {
     const element = document.body;
     element.classList.toggle("dark-mode");
 
-    const sections = document.querySelectorAll("main, div.info, div.spotlights, div.event, article.card, div.weather-info, div.form-wrapper, section.member div.form-wrapper");
+    const sections = document.querySelectorAll(
+        "main, div.info, div.spotlights, div.event, article.card, div.weather-info, div.form-wrapper, section.member div.form-wrapper"
+    );
     sections.forEach((section) => {
         section.classList.toggle("dark-mode");
     });
@@ -126,41 +129,59 @@ function initBanner() {
         banner.classList.add("banner-hide");
     });
 }
+/* ****************************************************
+    Spotlight Members
+***************************************************** */
 
-// ********* Spotlight Members *********
-function displaySpotlightMembers() {
-    const members = [
-        {
-            name: "Linda",
-            image: "images/linda.jpg",
-            alt: "Linda",
-            bio: "Linda is a dedicated member of the Chamber. She is always ready to help and support the community."
-        },
-        {
-            name: "John",
-            image: "images/john.jpg",
-            alt: "John",
-            bio: "John is a dedicated member of the Chamber. He is always ready to help and support the community."
-        },
-        {
-            name: "Jane",
-            image: "images/jane.jpg",
-            alt: "Jane",
-            bio: "Jane is a dedicated member of the Chamber. She is always ready to help and support the community."
+async function getSpotLightMembers() {
+    const dataURL = "https://vwolfley.github.io/wdd230/chamber/data/members.json";
+    try {
+        const response = await fetch(dataURL);
+        if (!response.ok) {
+            throw new Error("Failed to fetch data");
         }
-    ];
+        const data = await response.json();
+        // console.log(data);
+        displaySpotlightMembers(data.members);
+        return data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
+}
 
-    const spotlights = document.querySelector(".spotlights");
-    members.forEach((member) => {
-        const card = document.createElement("article");
-        card.classList.add("card");
-        card.innerHTML = `
-        <img src="${member.image}" alt="${member.alt}">
-        <div class="info">
-            <h3>${member.name}</h3>
-            <p>${member.bio}</p>
+function displaySpotlightMembers(members) {
+    console.log(members);
+
+    let topMembers = members.filter((member) => member.membership === "Silver" || member.membership === "Gold");
+
+    let randomMembers = topMembers.sort(() => 0.5 - Math.random()).slice(0, 4);
+
+    const spotlights = document.querySelector(".cards");
+
+    randomMembers.forEach((member) => {
+        const spotlight = document.createElement("article");
+        spotlight.classList.add("card");
+    
+       let status = member.membership === "Silver" ? "silver" : "gold";
+
+        spotlight.innerHTML = `
+        <h3 class="card-header ${status}">${member.membership} Member</h3>
+        <div class="card-body">
+        <img src="${member.logo}" alt="${member.company.toLowerCase()}-logo" loading="lazy" width=75 height=auto>
+        <div class="contact-info">
+            <address>
+                ${member.address}
+                <br />
+                ${member.city}, ${member.state} ${member.zip}
+            </address>
+            <div>
+                <a href=${member.website} target="_blank">${member.website}</a>
+            </div>
         </div>
-        `;
-        spotlights.appendChild(card);
+        </div>
+    `;
+
+        spotlights.appendChild(spotlight);
     });
 }

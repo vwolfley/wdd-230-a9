@@ -39,6 +39,11 @@
     --error-text: #a94442;
     --error-background: #f2dede;
     --error-border: #ebccd1;
+
+    --membershipNP: seaGreen;
+    --membershipBronze: #cd7f32;
+    --membershipSilver: #c0c0c0;
+    --membershipGold: #ffd700;
 }
 /* Mobile CSS ******************************** */
 
@@ -270,13 +275,41 @@ main {
 }
 
 .card {
-    padding: 1.5rem;
     border-radius: 0.5rem;
     border-width: 1px;
     border-color: #cbd5e1;
     max-width: 24rem;
     background-color: #ffffff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    height: 100%;
+}
+.card-header {
+    margin: 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: .8rem;
+    font-size: large;
+    font-weight: 700;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 1.2rem;
+}
+.card-body h3 {
+    margin: 0 0 8px 0;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.75rem;
+}
+.contact-info div {
+   display: flex;
+   flex-direction: column;
+    gap: 5px;
 }
 
 .card.dark-mode {
@@ -774,19 +807,19 @@ form {
     margin-top: 0;
 }
 .np {
-    background-color: seaGreen;
+    background-color: var(--membershipNP);
     color: var(--text-color-secondary);
 }
 .bronze {
-    background-color: #cd7f32;
+    background-color: var(--membershipBronze);
     color: var(--text-color-secondary);
 }
 .silver {
-    background-color: #c0c0c0;
+    background-color: var(--membershipSilver);
     color: var(--text-color-main);
 }
 .gold {
-    background-color: #ffd700;
+    background-color: var(--membershipGold);
     color: var(--text-color-main);
 }
 
