@@ -286,7 +286,7 @@ main {
 .card-header {
     margin: 0;
     border-radius: 0.5rem 0.5rem 0 0;
-    padding: .8rem;
+    padding: 0.8rem;
     font-size: large;
     font-weight: 700;
 }
@@ -307,14 +307,14 @@ main {
     font-size: 0.75rem;
 }
 .contact-info div {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
 .card.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
-    background-color: #1e293b;
+    background-color: #4b5563;
 }
 
 .info {
@@ -324,7 +324,7 @@ main {
     padding: 30px 0 30px 0;
 }
 
-.events {
+/* .events {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -338,11 +338,11 @@ main {
     border-color: #cbd5e1;
     background-color: #ffffff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-}
-.event.dark-mode {
+} */
+/* .event.dark-mode {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
     background-color: #1e293b;
-}
+} */
 
 .weather {
     display: flex;
@@ -655,6 +655,10 @@ footer section {
     color: var(--text-color-main);
     padding: 20px;
 }
+.style5.dark-mode {
+    background-color: #4b5563;
+    color: var(--text-color-secondary);
+}
 .style6 {
     border-style: solid;
     border-width: 2px;
@@ -705,6 +709,10 @@ footer section {
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
+}
+.event-card.dark-mode {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+    background-color: #1e293b;
 }
 .event-card h3 {
     margin: 0 0 5px 0;
@@ -829,7 +837,7 @@ form fieldset {
     border-radius: 10px;
     padding: 0.5rem 2%;
 }
-form fieldset .dark-mode {
+form fieldset.dark-mode {
     border: 1px solid var(--text-color-secondary);
 }
 form fieldset:last-of-type {
@@ -840,12 +848,18 @@ form legend {
     margin: 0 1rem;
     padding: 0 0.5rem;
 }
+form legend.dark-mode {
+    color: var(--text-color-secondary);
+}
 form label.top,
 form div {
     display: block;
     padding-top: 1rem;
     color: var(--accent1-color);
     font-size: 0.8rem;
+}
+form label.top.dark-mode {
+    color: var(--text-color-secondary);
 }
 form label.top input,
 form label.top textarea,
@@ -861,10 +875,20 @@ form label.top select {
     width: 100%;
     max-width: 20rem;
 }
+form label.top input.dark-mode {
+    background-color: #4b5563;
+    color: var(--text-color-secondary);
+}
 form label.sbs {
     display: block;
     padding: 0.75rem 0;
     color: var(--text-color-main);
+}
+form label.sbs.dark-mode {
+    color: var(--text-color-secondary);
+}
+form fieldset .dark-mode {
+    border: none;
 }
 form .submitBtn {
     border: none;
@@ -987,7 +1011,7 @@ button.homeBtn {
     height: 310px;
 }
 .member.dark-mode {
-    background-color: #1e293b;
+    background-color: #4b5563;
     color: var(--text-color-secondary);
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
 }
@@ -1005,6 +1029,10 @@ button.homeBtn {
 .member a {
     font-size: 0.65rem;
     color: var(--primary-color);
+}
+.member a.dark-mode {
+    background-color: #4b5563;
+    color: var(--text-color-secondary);
 }
 .grid {
     display: grid;
@@ -1064,6 +1092,13 @@ button.homeBtn {
 
 .list section:nth-child(even) {
     background-color: #e5e6e7;
+}
+.list section:nth-child(even).dark-mode {
+    color: var(--text-color-main);
+}
+.list section:nth-child(even) a.dark-mode {
+    background-color: #e5e6e7;
+    color: var(--text-color-main);
 }
 
 /* Weather Article ********************************* */
