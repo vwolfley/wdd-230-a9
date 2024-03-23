@@ -9,7 +9,7 @@ if (window.location.pathname === "/wdd230/chamber/directory.html" || window.loca
     getLastModified();
 }
 
-if (window.location.pathname === "/wdd230/chamber/discovery.html" || window.location.pathname === "/chamber/discovery.html") {
+if (window.location.pathname === "/wdd230/chamber/discover.html" || window.location.pathname === "/chamber/discover.html") {
     getCopyrightYear();
     getLastModified();
     // Call the function to update the page visits counter
