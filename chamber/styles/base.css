@@ -121,12 +121,19 @@ header a {
     color: var(--nav-link-color);
     transition: all 0.3s ease 0s;
 }
-header a:hover {
-    /* color: var(--nav-hover-background-color); */
+header a:hover,
+.active-page:hover {
     background-color: var(--nav-hover-background-color);
+    color: var(--nav-link-color);
     padding: 10px 20px;
     border-radius: 5px;
+    font-weight: normal;
 }
+.active-page {
+    color: var(--nav-hover-background-color);
+    font-weight: 900;
+}
+
 
 /* Dark Mode Button Switch ********************* */
 .dark-mode-btn {
@@ -466,7 +473,6 @@ footer section {
     text-decoration: none;
 }
 .footer-nav a:hover {
-    /* color: var(--secondary-color); */
     background-color: var(--nav-hover-background-color);
     padding: 10px 20px;
     border-radius: 5px;
