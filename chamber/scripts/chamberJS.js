@@ -151,7 +151,7 @@ async function getSpotLightMembers() {
 }
 
 function displaySpotlightMembers(members) {
-    console.log(members);
+    // console.log(members);
 
     let topMembers = members.filter((member) => member.membership === "Silver" || member.membership === "Gold");
 

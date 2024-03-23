@@ -1,10 +1,7 @@
-if (window.location.pathname === "/wdd230/chamber/thankyou.html") {
-    timeStamp();
-}
-
 function timeStamp() {
     // Get the current date and time
-    var now = new Date();
+    const now = new Date();
+    // Define the options for the date and time
     const options = {
         weekday: "short",
         year: "numeric",
@@ -18,13 +15,10 @@ function timeStamp() {
         timeZoneName: "short",
     };
     // Format the date and time
-    var timestamp = now.toLocaleString("en-US", options);
+    const timestamp = now.toLocaleString("en-US", options);
     // Display the timestamp
     document.getElementById("timestamp").innerText = `Timestamp: ${timestamp}`;
 }
 
 
-// Function to set value of hidden input field with current date/time in milliseconds
-function setTimestamp() {
-    document.getElementById("timestampmilli").value = Date.now();
-}
+

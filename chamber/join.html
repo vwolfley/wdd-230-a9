@@ -87,7 +87,7 @@
                                 <label class="top">Last Name* <input type="text" id="lname" name="lname" placeholder="Last Name" required /></label>
                                 <label class="top"
                                     >Title or Position*
-                                    <input type="text" id="position" name="position" required />
+                                    <input type="text" id="position" name="position" pattern="[a-zA-Z\- ]{7,}" required />
                                 </label>
                                 <label class="top"
                                     >Email*
@@ -221,7 +221,7 @@
         </footer>
         <!-- /Footer  -->
         <script src="scripts/chamberJS.js"></script>
-        <script src="scripts/timeStamp.js"></script>
+        <!-- <script src="scripts/timeStamp.js"></script> -->
         <script src="scripts/form.js"></script>
     </body>
 </html>

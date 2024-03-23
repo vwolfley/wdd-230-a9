@@ -5,8 +5,8 @@ function validateForm(event) {
 
     elements.forEach((input) => {
         if (input.value.trim() === "") {
-            showError();
             isValid = false;
+            showError();
         }
     });
     // Check if any radio option is selected
@@ -17,13 +17,14 @@ function validateForm(event) {
         }
     });
     if (!radioSelected) {
-        showError();
         isValid = false;
+        showError();
     }
 
     if (isValid) {
         // Form is valid, submit it
-        setTimestamp()
+        timeStamp();
+        event.preventDefault(); // Prevent form submission
     } else {
         event.preventDefault(); // Prevent form submission
     }
@@ -51,4 +52,9 @@ function showError() {
         error.classList.remove("error", "show");
         error.classList.add("hide");
     }, 3000); // Hide the message after 3 seconds
+}
+
+// Function to set value of hidden input field with current date/time in milliseconds
+function setTimestamp() {
+    document.getElementById("timestampmilli").value = Date.now();
 }
