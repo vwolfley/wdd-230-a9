@@ -130,7 +130,7 @@ header a:hover,
     font-weight: normal;
 }
 .active-page {
-    color: var(--membershipGold);
+    color: #fde047;
     font-weight: 900;
 }
 
@@ -672,7 +672,7 @@ footer section {
     padding: 20px;
 }
 .fast-facts {
-    color: var(--secondary-color);
+    color: var(--accent3-color);
 }
 .facts {
     display: flex;
@@ -683,7 +683,7 @@ footer section {
 .facts h3 {
     font-size: 0.9em;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--accent3-color);
     margin: 0;
     text-align: center;
 }
