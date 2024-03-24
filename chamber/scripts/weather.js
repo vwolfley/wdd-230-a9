@@ -191,7 +191,7 @@ function displayOneCallResults(data) {
 
         const weatherDay = document.createElement("div");
         weatherDay.setAttribute("class", "weather-day");
-        const weekDay = document.createElement("h5");
+        const weekDay = document.createElement("h4");
         const weatherFigure = document.createElement("figure");
         const weatherCaption = document.createElement("figcaption");
         const weatherIcon = document.createElement("img");

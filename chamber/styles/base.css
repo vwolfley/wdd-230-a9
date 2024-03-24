@@ -130,7 +130,7 @@ header a:hover,
     font-weight: normal;
 }
 .active-page {
-    color: var(--nav-hover-background-color);
+    color: var(--membershipGold);
     font-weight: 900;
 }
 
