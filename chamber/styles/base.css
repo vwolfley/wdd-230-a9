@@ -134,7 +134,6 @@ header a:hover,
     font-weight: 900;
 }
 
-
 /* Dark Mode Button Switch ********************* */
 .dark-mode-btn {
     display: flex;
@@ -173,8 +172,8 @@ input:checked + .toggle > .slider {
 main {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0 50px 0 50px;
+    padding: 0 25px 25px 25px;
 }
 /* TEMP ************************* */
 /* .hero-temp {
@@ -222,10 +221,21 @@ main {
 
 /* TEMP ************************* */
 .hero {
-    background-image: url("../images/west-valley-lp.webp");
     background-size: cover;
     background-position: center;
     padding: 150px 0;
+}
+.hero-home {
+    background-image: url("../images/west-valley-lp.webp");
+}
+.hero-join {
+    background-image: url("../images/hero/litchfield-park.webp");
+}
+.hero-directory {
+    background-image: url("../images/hero/buisness-park.webp");
+}
+.hero-discover {
+    background-image: url("../images/hero/sunset.webp");
 }
 
 .container {
@@ -569,8 +579,7 @@ footer section {
 
 .wrapper {
     display: grid;
-    /* background-color: #fff;
-    color: #444; */
+    padding: 50px 0;
 }
 .picture {
     display: flex;
@@ -756,7 +765,7 @@ footer section {
         "form"
         "membership";
     color: var(--text-color-main);
-    margin: 0 20px;
+    margin: 50px 20px 0 20px;
 }
 .form-wrapper.dark-mode {
     background-color: #1e293b;
@@ -984,6 +993,7 @@ button.homeBtn {
 #directory {
     margin: 2rem;
     position: relative;
+    padding: 20px;
 }
 #directory h2 {
     text-align: center;
