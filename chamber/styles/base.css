@@ -504,7 +504,7 @@ footer section {
     .nav-links {
         display: none;
         position: absolute;
-        top: 110px;
+        top: 100px;
         left: 0;
         width: 100%;
         background-color: var(--nav-background-color);
