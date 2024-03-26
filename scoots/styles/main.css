@@ -1,0 +1,296 @@
+/* ******************************************
+    CSS Style Sheet for the Scoots site 
+    wdd 230 vern wolfley
+********************************************* */
+/* Google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    /* Site Colors */
+    --primary-color: #34d399; /* Emerald 400 */
+    --secondary-color: #ffffff; /* White */
+    --accent1-color: #818cf8; /* Indigo 400 */
+    --accent2-color: #38bdf8; /* Sky 400 */
+    --accent3-color: #a3e635; /* Lime 400 */
+    --accent4-color: #fb7185; /* Rose 400 */
+
+    /* Font Colors */
+    --text-color-main: #020617; /* Slate 950 */
+    --text-color-header: #1e1b4b; /* Indigo 950 */
+    --text-color-secondary: #ffffff; /* White */
+
+    /* Site Fonts */
+    --heading-font: "Poppins", sans-serif;
+    --paragraph-font: "Merriweather", serif;
+}
+
+/* *********************************
+    Site Styles
+************************************ */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    font-style: normal;
+}
+
+/* *********************************
+    Header and Navigation 
+************************************ */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 20px 50px;
+    background-color: var(--primary-color);
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav-brand img {
+    width: 60px;
+    height: auto;
+}
+.nav-box {
+    display: flex;
+    gap: 20px;
+}
+.nav-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+    padding: 0;
+}
+.nav-info input {
+    display: none;
+}
+#nav-title {
+    margin-right: auto;
+    font-size: 0.8em;
+    color: var(--text-color-header);
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* gap: 2em; */
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 25px;
+}
+header a {
+    text-decoration: none;
+    color: var(--text-color-header);
+    transition: all 0.3s ease 0s;
+}
+header a:hover,
+.active-page:hover {
+    /* background-color: var(--primary-color); */
+    color: var(--text-color-secondary);
+    /* padding: 10px 20px;
+    border-radius: 5px; */
+    font-weight: 700;
+}
+.active-page {
+    color: var(--text-color-secondary);
+    font-weight: 900;
+}
+
+/* Add this CSS for mobile styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        z-index: 1000;
+    }
+    .nav-links ul {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        color: var(--text-color-header);
+        padding: 10px 0;
+    }
+    .nav-links ul li a:hover {
+        color: var(--text-color-secondary);
+    }
+    .nav-links ul li a.active-page {
+        color: var(--text-color-secondary);
+        font-weight: 900;
+    }
+
+    .nav-toggle:checked + .nav-links {
+        display: block;
+    }
+
+    .nav-btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-btn span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: var(--text-color-header);
+        margin: 6px 0;
+    }
+}
+
+/* *********************************
+    Footer Styles 
+************************************ */
+
+footer section {
+    background-color: var(--accent1-color);
+    color: var(--text-color-header);
+    padding: 30px 30px 20px 30px;
+    /* border-top: 1px solid #e5e5e5; */
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.footer-title {
+    grid-column: 1 / span 9;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.footer-title h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 1.3em;
+}
+
+.footer-title img {
+    width: 60px;
+    height: auto;
+}
+
+.footer h3 {
+    margin: 0.5em 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--text-color-header);
+}
+
+.footer-addr {
+    grid-column: 1 / span 5;
+    grid-row: 2;
+    margin-bottom: 2em;
+}
+
+.footer address {
+    font-style: normal;
+}
+
+.footer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: var(--accent4-color);
+    border-radius: 100px;
+    color: var(--text-color-header);
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0.15em 1.3em;
+    text-decoration: none;
+}
+
+.footer-btn:hover {
+    background-color: var(--accent4-color);
+}
+
+.footer-nav {
+    grid-column: 8 / span 1;
+    grid-row: 2;
+    margin-bottom: 2em;
+}
+
+.footer-nav ul {
+    flex: 1 50%;
+    margin-right: 1.25em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.footer-nav ul a {
+    color: var(--text-color-header);
+}
+
+.footer-nav li {
+    line-height: 2em;
+}
+.footer-nav a {
+    text-decoration: none;
+}
+.footer-nav a:hover {
+    color: var(--text-color-secondary);
+    /* background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px; */
+}
+.legal {
+    grid-row: 3;
+    grid-column: 1 / span 9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.7em;
+    color: var(--text-color-header);
+}

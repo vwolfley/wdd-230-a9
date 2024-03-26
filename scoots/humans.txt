@@ -29,11 +29,11 @@ Samanta Baez Gomez
 
 # SITE
 
-    Site Name: Chamber - WDD230
-    Site URL: https://vwolfley.github.io/wdd230/chamber/
+    Site Name: Scoots - WDD230
+    Site URL: https://vwolfley.github.io/wdd230/scoots/
     Version: 1.0.0
 	Last updated: 2023-12-06
-    Creation date: 2024-01-10
+    Creation date: 2024-03-24
 	Language: English
 	Doctype: HTML5
 	IDE: VS Code
