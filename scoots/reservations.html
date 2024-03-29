@@ -69,7 +69,78 @@
         <!-- /End Header & Navigation -->
         <!-- Content -->
         <main>
-       
+            <section class="contact-hero">
+                <div class="overlay">
+                    <h2>Reservations</h2>
+                    <p>Make your reservations here!</p>
+                </div>
+            </section>
+            <section class="contact-area">
+                <h3>Scoots Rental Reservations</h3>
+                <div class="contact-body">
+                    <div class="contact-info">
+                        <div class="address-block">
+                            <h3>Visit us at both locations</h3>
+                        </div>
+                    </div>
+                    <div class="reservation-form">
+                        <fieldset>
+                            <legend>Reservations Form</legend>
+                            <label class="top">Date*<input type="date" id="date" name="request-date" required /></label>
+                            <label class="top">Name* <input type="text" id="name" name="name" placeholder="Name" required /></label>
+                            <label class="top"
+                                >Mobile Phone*
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="5559991234" required
+                            /></label>
+                            <label class="top"
+                                >Email*
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="someone@gmail.com"
+                                    required
+                                    title="Please enter a valid email address"
+                            /></label>
+                            <label class="top">Home Country* <input type="text" id="country" name="country" required /></label>
+                            <label class="top">Cruise Line (optional) <input type="text" id="cruise-line" name="cruise-line" /></label>
+                            <label class="top">Special Accommodations <textarea id="accommodations" name="accommodations"></textarea></label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Vehicle Request</legend>
+                            <label class="top">Start Date*<input type="date" id="start-date" name="start-date" required /></label>
+                            <label class="top">End Date*<input type="date" id="end-date" name="end-date" required /></label>
+                            <div>Rental Period</div>
+                            <label class="sbs"><input type="radio" name="period" value="half-day" required /> Half Day</label>
+                            <label class="sbs"><input type="radio" name="period" value="full-day" required /> Full Day</label>
+                            <label class="top"
+                                >Choose a Vehicle:
+                                <select id="cars" name="cars">
+                                    <option value="none">Select One</option>
+                                    <option value="honda-metro">Honda Metro Scooter</option>
+                                    <option value="honda-dio">Honda Dio Scooter</option>
+                                    <option value="honda-pcx">Honda PCX150 Scooter</option>
+                                    <option value="honda-atv">Honda Pioneer ATV</option>
+                                    <option value="jeep-4-door">Jeep Wrangler - 4 door a/c</option>
+                                    <option value="jeep-2-door">Jeep Wrangler - 2 door</option>
+                                </select>
+                            </label>
+                            <label class="top"
+                                >Number of Riders:
+                                <select id="riders" name="riders">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </label>
+                        </fieldset>
+                        <button class="btn btn-primary"><a href="">Email us!</a></button>
+                    </div>
+                </div>
+            </section>
         </main>
         <!-- /End Content -->
         <!-- Footer  -->

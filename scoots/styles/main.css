@@ -787,3 +787,8 @@ fieldset label.top select {
     width: 100%;
     max-width: 20rem;
 }
+fieldset label.sbs {
+    display: block;
+    padding: 0.75rem 0;
+    color: var(--text-color-header);
+}
