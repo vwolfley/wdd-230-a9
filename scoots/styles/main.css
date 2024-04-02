@@ -24,6 +24,23 @@
     /* Site Fonts */
     --heading-font: "Poppins", sans-serif;
     --paragraph-font: "Merriweather", serif;
+
+    --success-text: #3c763d;
+    --success-background: #dff0d8;
+    --success-border: #d6e9c6;
+
+    --error-text: #a94442;
+    --error-background: #f2dede;
+    --error-border: #ebccd1;
+
+    --back: rgba(56,189,248, 1);
+    --back2: rgba(56,189,248, .5);
+    --foredark: hsla(0, 0%, 10%, 1);
+    --forelight: hsla(0, 0%, 100%, 1);
+    --border: hsla(0, 0%, 20%, 0.8);
+    --borderlight: hsla(0, 0%, 33%, 0.3);
+    --shadow: hsl(0, 0%, 50%);
+    --zebra: hsl(0, 0%, 93%, 1);
 }
 
 /* *********************************
@@ -39,6 +56,8 @@ body {
     font-style: normal;
     line-height: 1.5;
     background-color: #ffffff;
+    width: 100%;
+    height: 100%;
 }
 
 h1,
@@ -57,7 +76,7 @@ h6 {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 10px 20px 50px;
+    padding: 20px 50px;
     background-color: var(--primary-color);
 }
 .nav-brand {
@@ -238,6 +257,13 @@ footer section {
     justify-content: space-between;
     font-size: 0.7em;
     color: var(--text-color-header);
+}
+.legal a {
+    color: var(--text-color-header);
+    text-decoration: none;
+}
+.legal a:hover {
+    color: var(--text-color-secondary);
 }
 .address-block h3 {
     margin: 0 0 0.5em 0;
@@ -520,9 +546,22 @@ address div p {
         width: 100%;
     }
 }
-
 .contact-hero {
     background-image: url("../images/heros/electric-scooter.webp");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+}
+.reservations-hero {
+    background-image: url("../images/heros/reservations-hero.webp");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+}
+.rental-hero {
+    background-image: url("../images/heros/rental-hero.webp");
     background-position: center;
     background-size: cover;
     width: 100vw;
@@ -713,9 +752,10 @@ h5 {
 }
 
 /* *********************************
-    Contact Page Styles
+    Contact Page Styles & Reservations Page Styles
 ************************************ */
-.contact-area {
+.contact-area,
+.reservations-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -724,32 +764,39 @@ h5 {
     padding: 20px 80px;
     color: var(--text-color-header);
 }
-.contact-body {
+.contact-body,
+.reservations-body {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 25px;
 }
-.contact-info {
+.contact-info,
+.reservations-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 20px;
     order: 1;
 }
-.contact-form {
+.contact-form,
+.reservations-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 20px;
-    order:2;
+    order: 2;
 }
-@media (min-width: 768px) {
-    .contact-body {
+@media (min-width: 992px) {
+    .contact-body,
+    .reservations-body {
         flex-direction: row;
-        gap: 25;
+        gap: 50px;
     }
+}
+.reservations-area p {
+    text-align: center;
 }
 
 fieldset {
@@ -791,4 +838,150 @@ fieldset label.sbs {
     display: block;
     padding: 0.75rem 0;
     color: var(--text-color-header);
+}
+fieldset label.top input:required,
+fieldset label.top select:required {
+    border-left: var(--error-text) solid 6px;
+}
+fieldset label.top input:required:valid,
+fieldset label.top select:required {
+    border-left: var(--success-text) solid 6px;
+}
+/* Attributions */
+.attributions {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 50px;
+    color: var(--text-color-header);
+}
+.attributions h3 {
+    margin: 0;
+}
+/* Banner on home page */
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--accent1-color);
+    color: var(--text-color-header);
+    padding: 15px;
+    z-index: 1000;
+}
+.banner-hide {
+    display: none;
+}
+
+.banner h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#closeBanner {
+    background: none;
+    color: var(--text-color-header);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+#closeBanner:hover {
+    color: var(--text-color-secondary);
+}
+.weather {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    background-color: var(--accent1-color);
+    color: var(--text-color-header);
+}
+.weatherGroup {
+    border-right: solid 2px white;
+    padding: 0 30px;
+}
+.weatherGroup:last-child {
+    border-right: none;
+}
+
+.weatherGroup span,
+.futureWeatherGroup span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weatherGroup img {
+    width: 30px;
+    height: 30px;
+}
+.temp-day {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.tempDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pricing Table */
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 80px;
+    color: var(--text-color-header);
+}
+table {
+    margin: 10px auto;
+    border: thin solid var(--border);
+    box-shadow: 0 0 10px var(--shadow);
+    border-collapse: collapse;
+    font-size: .75rem;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+    color: var(--back);
+    font-size: 0.85rem;
+}
+
+thead tr:first-child th {
+    background-color: var(--back);
+    color: var(--text-color-header);
+    font-size: 1.3rem;
+    padding: 15px;
+}
+thead tr:nth-child(2) th:first-child{
+    background-color: var(--back);
+    color: var(--forelight);
+    padding: 15px;
+}
+
+th,
+td {
+    padding: 7px 15px;
+    border: 1px solid var(--borderlight);
+}
+
+th {
+    background-color: var(--back2);
+    padding: 15px;
+}
+
+td {
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--zebra);
+}
+
+tbody tr td:first-child {
+    font-weight: bold;
 }

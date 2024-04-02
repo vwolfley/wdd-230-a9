@@ -52,7 +52,7 @@
                     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
                     <nav class="nav-links">
                         <ul>
-                            <li><a href="./index.html" >Home</a></li>
+                            <li><a href="./index.html">Home</a></li>
                             <li><a href="./rentals.html" class="active-page">Rentals</a></li>
                             <li><a href="./reservations.html">Reservations</a></li>
                             <li><a href="./contact.html">Contact</a></li>
@@ -69,7 +69,35 @@
         <!-- /End Header & Navigation -->
         <!-- Content -->
         <main>
-            
+            <section class="rental-hero">
+                <div class="overlay">
+                    <h2>Rentals</h2>
+                    <p>Which vehicle is right for you?</p>
+                </div>
+            </section>
+            <section class="pricing">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="6" scope="colgroup">Scoots Rental Pricing</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" scope="col"></th>
+                            <th colspan="2" scope="col">Reservation</th>
+                            <th colspan="2" scope="col">Walk-In</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Rental Type</th>
+                            <th scope="col">Max.</br>Persons</th>
+                            <th scope="col">Half Day</br>(3 hrs)</th>
+                            <th scope="col">Full Day</th>
+                            <th scope="col">Half Day</br>(3 hrs)</th>
+                            <th scope="col">Full Day</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
         </main>
         <!-- /End Content -->
         <!-- Footer  -->
@@ -121,7 +149,7 @@
                 <div class="logo-block">
                     <img src="images//favicons/motorcycle.webp" alt="Scooter Logo" width="150" height="150" />
                     <p>Where every ride is an adventure waiting to happen!</p>
-                    <button class="btn footer-btn"><a href="/">View Rentals</a></button>
+                    <button class="btn btn-secondary"><a href="/">View Rentals</a></button>
                 </div>
                 <div class="social-media-block">
                     <ul class="social-media-links">
@@ -214,7 +242,10 @@
 
                 <div class="legal">
                     <div class="">
-                        <span><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project</span>
+                        <span
+                            ><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project |
+                            <a href="./attributions.html">Attribution</a></span
+                        >
                     </div>
                     <div class="">
                         <span id="lastModified"></span>
@@ -223,5 +254,7 @@
             </section>
         </footer>
         <!-- /Footer  -->
+        <!-- Scripts -->
+        <script src="scripts/rentals.js"></script>
     </body>
 </html>

@@ -41,6 +41,10 @@
         <link type="text/css" rel="stylesheet" href="./styles/larger.css" />
     </head>
     <body>
+        <article id="banner" class="" role="alert">
+            <h2>Todays high temperature will be: <span class="tempHigh"></span> &deg;F</h2>
+            <button type="button" id="closeBanner" aria-label="Close">x</button>
+        </article>
         <!-- Header & Navigation -->
         <header class="nav">
             <div class="nav-brand">
@@ -69,6 +73,7 @@
         <!-- /End Header & Navigation -->
         <!-- Content -->
         <main>
+            <section class="weather"></section>
             <div class="hero-section">
                 <div class="hero-container">
                     <div class="hero-info">
@@ -354,7 +359,10 @@
 
                 <div class="legal">
                     <div class="">
-                        <span><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project</span>
+                        <span
+                            ><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project |
+                            <a href="./attributions.html">Attribution</a></span
+                        >
                     </div>
                     <div class="">
                         <span id="lastModified"></span>
@@ -363,5 +371,8 @@
             </section>
         </footer>
         <!-- /Footer  -->
+        <!-- Scripts -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/weather.js"></script>
     </body>
 </html>

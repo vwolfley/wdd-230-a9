@@ -1,0 +1,117 @@
+// https://openweathermap.org/current
+// https://openweathermap.org/weathermap
+
+const apiKey = "0aec6412eede92415f476e7030db63f4";
+
+// Cozumel, Mexico
+const lat = 20.512992206946528;
+const lon = -86.93069161251013;
+
+const urlOpenWeather = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude={hourly,minutely,alerts}&appid=${apiKey}`;
+
+async function apiFetchOpenWeather(url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            // console.log(data);
+            displayOneCallResults(data);
+        } else {
+            throw new Error(await response.text());
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+apiFetchOpenWeather(urlOpenWeather);
+
+function displayOneCallResults(data) {
+    console.log(data);
+    const results = data.daily;
+    const weatherBanner = document.querySelector(".weather");
+    const weatherGroup = document.querySelector(".weatherGroup");
+
+    // Current day high temperature
+    const dailyHigh = document.querySelector(".tempHigh");
+    dailyHigh.innerHTML = Math.round(results[0].temp.max);
+
+    // Current temperature
+    const currentTemp = Math.round(data.current.temp);
+    // Current humidity
+    const currentHumidity = data.current.humidity;
+    // Current weather description
+    const currentDescription = data.current.weather[0].description;
+    // Current weather icon
+    const currentIcon = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png`;
+
+    weatherBanner.innerHTML = `
+    <article class="weatherGroup">
+    <span>
+        <div>Currently</div>
+        <div class="temp-day">
+        <div class="tempDiv"><span>Temp</span><span>${currentTemp}&deg;F</span></div>
+        <div class="tempDiv"><span>Humidity</span><span>${currentHumidity}%</span></div>
+        <div class="tempDiv"><span><img src=${currentIcon} alt=${currentDescription}></span><span>${currentDescription}</span></div>
+        </div>
+    </span>
+</article>
+`;
+
+    // Filter the results to get the next 5 days
+    const dailyResults = results.slice(1, 5);
+
+    dailyResults.forEach((day) => {
+        const timestamp = day.dt * 1000;
+        let weekday = dayOfTheWeek(timestamp);
+
+        // Future temperature
+        const futureTemp = Math.round(day.temp.day);
+        // Future humidity
+        const futureHumidity = day.humidity;
+        // Future weather description
+        const futureDescription = day.weather[0].description;
+        // Future weather icon
+        const futureIcon = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`;
+
+        const futureDay = document.createElement("article");
+        futureDay.classList.add("weatherGroup");
+
+        futureDay.innerHTML = `
+    <span>
+        <div>${weekday}</div>
+        <div class="temp-day">
+        <div class="tempDiv"><span>Temp</span><span>${futureTemp}&deg;F</span></div>
+        <div class="tempDiv"><span>Humidity</span><span>${futureHumidity}%</span></div>
+        <div class="tempDiv"><span><img src=${futureIcon} alt=${futureDescription}></span><span>${futureDescription}</span></div>
+        </div>
+    </span>
+`;
+        weatherBanner.appendChild(futureDay);
+    });
+}
+
+
+function dayOfTheWeek(timestamp) {
+    const options = {
+        weekday: "long",
+    };
+    const date = new Date(timestamp);
+    return date.toLocaleDateString("en-US", options);
+}
+
+function dateFormate(timestamp) {
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: false,
+        timeZone: "America/Phoenix",
+        timeZoneName: "short",
+    };
+    const date = new Date(timestamp);
+    return date.toLocaleDateString("en-US", options);
+}
