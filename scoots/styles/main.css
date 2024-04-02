@@ -636,7 +636,8 @@ h5 {
 }
 /* ********************************* */
 .home-rides-info,
-.places-info {
+.places-info,
+.rental-rides-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -679,7 +680,8 @@ h5 {
     text-align: center;
     width: 375px;
 }
-.card:nth-child(2) {
+.home-rides-info .card:nth-child(2),
+.places-info .card:nth-child(2) {
     width: 450px;
 }
 
@@ -695,6 +697,7 @@ h5 {
 .card img {
     width: 300px;
     height: auto;
+    max-height: 225px;
 }
 .card-body {
     padding: 0 0 10px;
