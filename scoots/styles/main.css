@@ -789,6 +789,9 @@ h5 {
     gap: 20px;
     order: 1;
 }
+.contact-info h3{
+    text-align: center;
+}
 .contact-form,
 .reservations-form {
     display: flex;
@@ -807,6 +810,27 @@ h5 {
 }
 .reservations-area p {
     text-align: center;
+}
+.hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 25px auto;
+}
+.hours h5 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.hours p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+iframe {
+    width: 600px;
+    height: 300px;
+    border: none;
 }
 
 fieldset {
@@ -889,6 +913,7 @@ fieldset label.top textarea:required:valid {
     height: 1.5rem;
     fill: currentColor;
 }
+
 
 /* Attributions */
 .attributions {
