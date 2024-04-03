@@ -76,11 +76,26 @@
                 </div>
             </section>
             <section class="contact-area">
+                <div id="email-banner" class="email-banner banner-hide" role="alert">
+                    <div class="email-container">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"
+                                />
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Thank You!</p>
+                            <p>Your email has been sent.</p>
+                        </div>
+                    </div>
+                </div>
                 <h3>We’d Love To Hear From You!</h3>
                 <div class="contact-body">
                     <div class="contact-info">
                         <div class="address-block">
-                            <h3>Visit us at both locations</h3>
+                            <h4>Visit us at both locations</h4>
                             <div class="address">
                                 <address>
                                     <h4>Scoots @ Playa del Carmen-Cozumel</h4>
@@ -138,23 +153,32 @@
                         </div>
                     </div>
                     <div class="contact-form">
-                        <fieldset>
-                            <legend>Email Contact</legend>
-                            <label class="top">Name* <input type="text" id="name" name="name" placeholder="Name" required /></label>
-                            <label class="top"
-                                >Email*
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="someone@gmail.com"
-                                    required
-                                    title="Please enter a valid email address"
-                            /></label>
-                            <label class="top">Subject* <input type="text" id="subject" name="subject" required /></label>
-                            <label class="top">Message* <textarea id="message" name="message"></textarea></label>
-                        </fieldset>
-                        <button class="btn btn-primary"><a href="">Email us!</a></button>
+                        <form method="get" action="#" onsubmit="showSuccess(); return false;">
+                            <fieldset>
+                                <legend>Quick Contact</legend>
+                                <label class="top">Name* <input type="text" id="name" name="name" placeholder="Name" required /></label>
+                                <label class="top"
+                                    >Mobile Phone
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="5559991234"
+                                /></label>
+                                <label class="top"
+                                    >Email*
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="your-email@valid-email.com"
+                                        required
+                                        title="Please enter a valid email address"
+                                /></label>
+                                <label class="top">Subject* <input type="text" id="subject" name="subject" required /></label>
+                                <label class="top"
+                                    >Message*
+                                    <textarea id="message" name="message" placeholder="Anything else you want us to know..." required></textarea>
+                                </label>
+                            </fieldset>
+                            <button class="btn btn-primary" type="submit">Email us!</button>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -302,7 +326,10 @@
 
                 <div class="legal">
                     <div class="">
-                        <span><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project | <a href="./attributions.html">Attribution</a></span>
+                        <span
+                            ><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project |
+                            <a href="./attributions.html">Attribution</a></span
+                        >
                     </div>
                     <div class="">
                         <span id="lastModified"></span>
@@ -311,5 +338,7 @@
             </section>
         </footer>
         <!-- /Footer  -->
+        <!-- Scripts -->
+        <script src="scripts/main.js"></script>
     </body>
 </html>

@@ -10,24 +10,17 @@ function getLastModified() {
     document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModified}`;
 }
 
-// ********* Weather Banner *********
-function weatherBanner() {
-    const banner = document.getElementById("banner");
-    const closeBannerBtn = document.getElementById("closeBanner");
-
-    // // Set initial visibility
-    const isBannerVisible = true;
-    banner.classList.toggle("banner", isBannerVisible);
-    banner.classList.toggle("banner-hide", !isBannerVisible);
-
-    // Close the banner when the close button is clicked
-    closeBannerBtn.addEventListener("click", function () {
-        banner.classList.add("banner-hide");
-    });
+function showSuccess() {
+    const success = document.getElementById("email-banner");
+    success.classList.remove("banner-hide");
+    success.classList.add("banner-show");
+    // Reset the display property after 3 seconds
+    setTimeout(function () {
+        success.classList.remove("banner-show");
+        success.classList.add("banner-hide");
+    }, 3000); // Hide the message after 3 seconds
 }
-
 
 // Call Functions
 getCopyrightYear();
 getLastModified();
-weatherBanner();

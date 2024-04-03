@@ -33,8 +33,8 @@
     --error-background: #f2dede;
     --error-border: #ebccd1;
 
-    --back: rgba(56,189,248, 1);
-    --back2: rgba(56,189,248, .5);
+    --back: rgba(56, 189, 248, 1);
+    --back2: rgba(56, 189, 248, 0.5);
     --foredark: hsla(0, 0%, 10%, 1);
     --forelight: hsla(0, 0%, 100%, 1);
     --border: hsla(0, 0%, 20%, 0.8);
@@ -767,6 +767,13 @@ h5 {
     padding: 20px 80px;
     color: var(--text-color-header);
 }
+.contact-area h3,
+.reservations-area h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
 .contact-body,
 .reservations-body {
     display: flex;
@@ -807,6 +814,7 @@ fieldset {
     border: 1px solid var(--text-color-header);
     border-radius: 10px;
     padding: 0.5rem 2%;
+    width: 20rem;
 }
 fieldset:last-of-type {
     margin-bottom: 5px;
@@ -822,6 +830,7 @@ fieldset div {
     padding-top: 1rem;
     color: var(--text-color-header);
     font-size: 0.8rem;
+    width: 18rem;
 }
 fieldset label.top input,
 fieldset label.top textarea,
@@ -843,13 +852,44 @@ fieldset label.sbs {
     color: var(--text-color-header);
 }
 fieldset label.top input:required,
-fieldset label.top select:required {
+fieldset label.top select:required ,
+fieldset label.top textarea:required {
     border-left: var(--error-text) solid 6px;
 }
 fieldset label.top input:required:valid,
-fieldset label.top select:required {
+fieldset label.top select:required,
+fieldset label.top textarea:required:valid {
     border-left: var(--success-text) solid 6px;
 }
+/* Success Banner */
+.email-banner {
+    padding: 0.75rem 1rem;
+    border-top: 4px solid var(--success-text);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: var(--success-background);
+    z-index: 1000;
+    width: 75%;
+}
+.email-container {
+    display: flex;
+}
+.email-container p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color-header);
+}
+.email-container .icon {
+    padding: 0.25rem 0;
+}
+.email-container .icon svg {
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+}
+
 /* Attributions */
 .attributions {
     display: flex;
@@ -870,9 +910,13 @@ fieldset label.top select:required {
     padding: 15px;
     z-index: 1000;
 }
+.banner-show {
+    display: flex;
+}
 .banner-hide {
     display: none;
 }
+
 
 .banner h2 {
     text-align: center;
@@ -944,7 +988,7 @@ table {
     border: thin solid var(--border);
     box-shadow: 0 0 10px var(--shadow);
     border-collapse: collapse;
-    font-size: .75rem;
+    font-size: 0.75rem;
 }
 
 caption {
@@ -960,7 +1004,7 @@ thead tr:first-child th {
     font-size: 1.3rem;
     padding: 15px;
 }
-thead tr:nth-child(2) th:first-child{
+thead tr:nth-child(2) th:first-child {
     background-color: var(--back);
     color: var(--forelight);
     padding: 15px;
