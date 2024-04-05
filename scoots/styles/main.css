@@ -693,7 +693,6 @@ h5 {
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 375px;
-    
 }
 /* .home-rides-info .card:nth-child(2),
 .places-info .card:nth-child(2) {
@@ -717,7 +716,6 @@ h5 {
 .card-body {
     padding: 0 0 10px;
     flex: 1;
-    
 }
 .places-info img {
     width: 100%;
@@ -795,17 +793,32 @@ h5 {
 .reservations-body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 100%;
     gap: 25px;
 }
 .contact-info,
 .reservations-info {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 20px;
     order: 1;
 }
+.agreement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+}
+.agreement h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+/* .agreement ul{
+    margin-top: 5px;
+} */
 .contact-info h3 {
     text-align: center;
 }
@@ -1033,6 +1046,7 @@ fieldset label.top textarea:required:valid {
     margin: 0 auto;
     padding: 20px 80px;
     color: var(--text-color-header);
+    order: 2;
 }
 table {
     margin: 10px auto;
@@ -1099,15 +1113,26 @@ tbody tr td:first-child {
     font-weight: 600;
     margin: 5px 0;
 }
-.rental-benefits ul {
+.rental-benefits ul,
+.agreement ul{
     padding: 0;
     line-height: 2;
 }
-.rental-benefits li {
+.rental-benefits li,
+.agreement li {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 10px;
+}
+.rental-benefits li::before,
+.agreement li::before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    background-image: url("../images/svg/circle-check.svg");
+    background-size: cover; 
 }
 .check-svg {
     width: 0.875rem;
