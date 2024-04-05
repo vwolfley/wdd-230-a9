@@ -837,7 +837,7 @@ fieldset {
     margin: 1rem 0;
     border: 1px solid var(--text-color-header);
     border-radius: 10px;
-    padding: 0.5rem 2%;
+    padding: 0.5rem 5%;
     width: 20rem;
 }
 fieldset:last-of-type {
@@ -872,7 +872,12 @@ fieldset label.top select {
 }
 fieldset label.sbs {
     display: block;
-    padding: 0.75rem 0;
+    padding: 0.70rem 0;
+    color: var(--text-color-header);
+}
+fieldset label.rad {
+    display: block;
+    padding: 0.15rem 0;
     color: var(--text-color-header);
 }
 fieldset label.top input:required,

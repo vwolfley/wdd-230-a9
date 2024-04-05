@@ -77,7 +77,10 @@
             </section>
             <section class="reservations-area">
                 <h3>Scoots Rental Reservations</h3>
-                <p>Elevate your Cozumel getaway with the convenience of reserving your rental vehicle today. Simply read the services agreement below and complete the form to begin your adventure.</p>
+                <p>
+                    Elevate your Cozumel getaway with the convenience of reserving your rental vehicle today. Simply read the services agreement below
+                    and complete the form to begin your adventure.
+                </p>
                 <div class="reservations-body">
                     <div class="reservations-info">
                         <div class="">
@@ -103,12 +106,12 @@
                                 <label class="top">Pickup Date*<input type="date" id="start-date" name="start-date" required /></label>
                                 <label class="top">Return Date*<input type="date" id="end-date" name="end-date" required /></label>
                                 <div>Rental Length</div>
-                                <label class="sbs"><input type="radio" name="period" value="half-day" required /> Half Day</label>
-                                <label class="sbs"><input type="radio" name="period" value="full-day" required /> Full Day</label>
+                                <label class="rad"><input type="radio" name="period" value="half-day" required /> Half Day</label>
+                                <label class="rad"><input type="radio" name="period" value="full-day" required /> Full Day</label>
                                 <label class="top"
                                     >Choose a Vehicle:
                                     <select id="vehicle" class="" name="vehicle" required>
-                                        <option value="none">Select One</option>
+                                        <option value="">Select One</option>
                                         <option value="honda-metro">Honda Metro Scooter</option>
                                         <option value="honda-dio">Honda Dio Scooter</option>
                                         <option value="honda-pcx">Honda PCX150 Scooter</option>
@@ -120,7 +123,7 @@
                                 <label class="top"
                                     >Number of Riders:
                                     <select id="riders" class="" name="riders" required>
-                                        <option value="0">0</option>
+                                        <option value="">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -128,7 +131,7 @@
                                         <option value="5">5</option>
                                     </select>
                                 </label>
-                                <label class="sbs"><input type="checkbox" name="insurance" value="yes" required /> Add Vehicle Insurance</label>
+                                <label class="sbs"><input type="checkbox" name="insurance" value="yes" /> Add Vehicle Insurance</label>
                             </fieldset>
                             <fieldset>
                                 <legend>Drivers Information</legend>
@@ -168,7 +171,7 @@
                                     </select>
                                 </label>
 
-                                <label class="sbs"><input type="checkbox" name="drop-off" value="yes" required /> Request Drop Off</label>
+                                <label class="sbs"><input type="checkbox" name="drop-off" value="yes" /> Request Drop Off</label>
                                 <label class="top"
                                     >Special Accommodations
                                     <textarea
@@ -179,7 +182,7 @@
                                 </label>
                             </fieldset>
 
-                            <button class="btn btn-primary"><a href="">Reserve my Ride</a></button>
+                            <button class="btn btn-primary" onclick="validateForm(event)">Reserve my Ride</button>
                         </form>
                     </div>
                 </div>
@@ -328,7 +331,10 @@
 
                 <div class="legal">
                     <div class="">
-                        <span><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project | <a href="./attributions.html">Attribution</a></span>
+                        <span
+                            ><span id="cYear">&copy;</span> Scoots Rentals | Vern Wolfley | WDD 230 Final Project |
+                            <a href="./attributions.html">Attribution</a></span
+                        >
                     </div>
                     <div class="">
                         <span id="lastModified"></span>
@@ -338,7 +344,7 @@
         </footer>
         <!-- /Footer  -->
         <!-- Scripts -->
-         <script src="scripts/main.js"></script>
+        <script src="scripts/main.js"></script>
         <script src="scripts/reservations.js"></script>
     </body>
 </html>
