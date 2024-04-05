@@ -6,6 +6,9 @@
     .nav-info input {
         display: none;
     }
+    .weather {
+        gap: 50px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -15,6 +18,9 @@
     }
     .nav-info input {
         display: none;
+    }
+    .weather {
+        gap: 60px;
     }
 }
 

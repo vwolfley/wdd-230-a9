@@ -48,10 +48,12 @@ function displayOneCallResults(data) {
     <article class="weatherGroup">
     <span>
         <div>Currently</div>
-        <div class="temp-day">
-        <div class="tempDiv"><span>Temp</span><span>${currentTemp}&deg;F</span></div>
-        <div class="tempDiv"><span>Humidity</span><span>${currentHumidity}%</span></div>
-        <div class="tempDiv"><span><img src=${currentIcon} alt=${currentDescription}></span><span>${currentDescription}</span></div>
+            <div class="temp-day">
+            <div class="tempDiv"><span><img src=${currentIcon} alt=${currentDescription}></span><span>${currentDescription}</span></div>
+            <div class="temp-group">
+                <span>${currentTemp}&deg;F</span>
+                <span>${currentHumidity}%</span>
+            </div>
         </div>
     </span>
 </article>
@@ -79,17 +81,18 @@ function displayOneCallResults(data) {
         futureDay.innerHTML = `
     <span>
         <div>${weekday}</div>
-        <div class="temp-day">
-        <div class="tempDiv"><span>Temp</span><span>${futureTemp}&deg;F</span></div>
-        <div class="tempDiv"><span>Humidity</span><span>${futureHumidity}%</span></div>
-        <div class="tempDiv"><span><img src=${futureIcon} alt=${futureDescription}></span><span>${futureDescription}</span></div>
-        </div>
+            <div class="temp-day">
+                <div class="tempDiv"><span><img src=${futureIcon} alt=${futureDescription}></span><span>${futureDescription}</span></div>
+                <div class="temp-group">
+                        <span>${futureTemp}&deg;F</span>
+                        <span>${futureHumidity}%</span>
+                    </div>
+            </div>
     </span>
 `;
         weatherBanner.appendChild(futureDay);
     });
 }
-
 
 function dayOfTheWeek(timestamp) {
     const options = {

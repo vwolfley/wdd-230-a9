@@ -15,6 +15,7 @@
     --accent2-color: #38bdf8; /* Sky 400 */
     --accent3-color: #a3e635; /* Lime 400 */
     --accent4-color: #fb7185; /* Rose 400 */
+    --accent5-color: #3730a3; /* Indigo 800 */
 
     /* Font Colors */
     --text-color-main: #020617; /* Slate 950 */
@@ -402,17 +403,17 @@ address div p {
     border-width: 1px;
     border-color: transparent;
     font-size: 1rem;
-    line-height: 1.5rem;
     font-weight: 500;
     line-height: 1.5rem;
     cursor: pointer;
     padding: 0.8rem 1.8rem;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
     cursor: pointer;
 }
 .btn.btn-secondary {
     padding: 0.6rem 1.6rem;
+}
+.btn.btn-reserve {
+    padding: 0.4rem 1.2rem;
 }
 
 .btn-primary {
@@ -434,6 +435,17 @@ address div p {
     background-color: #bef264;
 }
 .btn-secondary a {
+    text-decoration: none;
+    color: var(--text-color-header);
+}
+.btn-reserve {
+    color: var(--text-color-header);
+    background-color: var(--accent3-color);
+}
+.btn-reserve:hover {
+    background-color: #bef264;
+}
+.btn-reserve a {
     text-decoration: none;
     color: var(--text-color-header);
 }
@@ -674,16 +686,19 @@ h5 {
     margin: 0 auto 20px auto;
 }
 .card {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 375px;
+    
 }
-.home-rides-info .card:nth-child(2),
+/* .home-rides-info .card:nth-child(2),
 .places-info .card:nth-child(2) {
     width: 450px;
-}
+} */
 
 .card h3 {
     font-size: 1.1em;
@@ -701,6 +716,8 @@ h5 {
 }
 .card-body {
     padding: 0 0 10px;
+    flex: 1;
+    
 }
 .places-info img {
     width: 100%;
@@ -789,7 +806,7 @@ h5 {
     gap: 20px;
     order: 1;
 }
-.contact-info h3{
+.contact-info h3 {
     text-align: center;
 }
 .contact-form,
@@ -872,7 +889,7 @@ fieldset label.top select {
 }
 fieldset label.sbs {
     display: block;
-    padding: 0.70rem 0;
+    padding: 0.7rem 0;
     color: var(--text-color-header);
 }
 fieldset label.rad {
@@ -881,7 +898,7 @@ fieldset label.rad {
     color: var(--text-color-header);
 }
 fieldset label.top input:required,
-fieldset label.top select:required ,
+fieldset label.top select:required,
 fieldset label.top textarea:required {
     border-left: var(--error-text) solid 6px;
 }
@@ -919,7 +936,6 @@ fieldset label.top textarea:required:valid {
     fill: currentColor;
 }
 
-
 /* Attributions */
 .attributions {
     display: flex;
@@ -947,7 +963,6 @@ fieldset label.top textarea:required:valid {
     display: none;
 }
 
-
 .banner h2 {
     text-align: center;
     font-size: 1.2rem;
@@ -970,15 +985,10 @@ fieldset label.top textarea:required:valid {
     justify-content: center;
     font-size: 0.8rem;
     line-height: 1rem;
-    background-color: var(--accent1-color);
+    background-color: #c7d2fe;
     color: var(--text-color-header);
-}
-.weatherGroup {
-    border-right: solid 2px white;
-    padding: 0 30px;
-}
-.weatherGroup:last-child {
-    border-right: none;
+    padding: 5px 20px;
+    gap: 30px;
 }
 
 .weatherGroup span,
@@ -994,14 +1004,25 @@ fieldset label.top textarea:required:valid {
 }
 .temp-day {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
-.tempDiv {
-    display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.tempDiv span {
+    text-transform: lowercase;
+    font-size: 0.65rem;
+}
+.temp-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+.temp-group span:first-child {
+    color: var(--accent5-color);
+}
+.temp-group span:last-child {
+    color: var(--accent5-color);
 }
 
 /* Pricing Table */
@@ -1061,4 +1082,35 @@ tbody tr:nth-child(even) {
 
 tbody tr td:first-child {
     font-weight: bold;
+}
+
+.rental-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 80px;
+    color: var(--text-color-header);
+    background-color: var(--accent2-color);
+}
+.rental-benefits h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.rental-benefits ul {
+    padding: 0;
+    line-height: 2;
+}
+.rental-benefits li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+.check-svg {
+    width: 0.875rem;
+    height: 0.875rem;
+    color: var(--accent3-color);
 }
