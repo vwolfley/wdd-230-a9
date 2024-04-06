@@ -693,12 +693,18 @@ h5 {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     text-align: center;
+    width: 100%;
     max-width: 375px;
 }
-/* .home-rides-info .card:nth-child(2),
-.places-info .card:nth-child(2) {
-    width: 450px;
-} */
+.card-hours {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 300px;
+}
 
 .card h3 {
     font-size: 1.1em;
@@ -791,25 +797,32 @@ h5 {
 .contact-area .contact-body {
     display: flex;
     flex-direction: column;
+    gap: 50px;
 }
 
 .reservations-area .reservations-body {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 75px;
-    width: 100%;
-    gap: 25px;
+    gap: 50px;
 }
-.contact-info,
-.reservations-info {
+
+.contact-info {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 20px;
     gap: 20px;
     order: 1;
     width: 100%;
     max-width: 600px;
+}
+.reservations-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+    order: 1;
+    width: 100%;
+    max-width: 800px;
 }
 .agreement {
     display: flex;
@@ -832,7 +845,6 @@ h5 {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 20px;
     order: 2;
     width: 100%;
     max-width: 600px;
@@ -841,9 +853,8 @@ h5 {
     .contact-area .contact-body {
         flex-direction: row;
     }
-    .reservations-body {
+    .reservations-area .reservations-body {
         flex-direction: row;
-        gap: 50px;
     }
 }
 .reservations-area p {
@@ -1053,11 +1064,6 @@ fieldset label.top textarea:required:valid {
 
 /* Pricing Table */
 .pricing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 20px 80px;
     color: var(--text-color-header);
     order: 2;
 }
