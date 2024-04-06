@@ -214,7 +214,7 @@ footer section {
     max-width: 100%;
     background-color: var(--accent1-color);
     color: var(--text-color-header);
-    padding: 30px 30px 20px 30px;
+    padding: 30px 70px;
 }
 .footer-title {
     grid-row: 1;
@@ -599,6 +599,7 @@ address div p {
     margin-top: 1.25rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
+    text-align: center;
 }
 /* *********************************
     // END Hero Section Styles
@@ -692,7 +693,7 @@ h5 {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 375px;
+    max-width: 375px;
 }
 /* .home-rides-info .card:nth-child(2),
 .places-info .card:nth-child(2) {
@@ -776,24 +777,26 @@ h5 {
 .reservations-area {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     padding: 20px 80px;
     color: var(--text-color-header);
 }
-.contact-area h3,
+.contact-area h2,
 .reservations-area h3 {
     font-size: 1.5em;
     font-weight: 600;
-    margin: 5px 0;
+    margin: 25px 0;
+    text-align: center;
 }
-
-.contact-body,
-.reservations-body {
+.contact-area .contact-body {
     display: flex;
     flex-direction: column;
+}
+
+.reservations-area .reservations-body {
+    flex-direction: column;
     justify-content: center;
+    padding: 0 75px;
     width: 100%;
     gap: 25px;
 }
@@ -801,9 +804,12 @@ h5 {
 .reservations-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
     gap: 20px;
     order: 1;
+    width: 100%;
+    max-width: 600px;
 }
 .agreement {
     display: flex;
@@ -816,9 +822,7 @@ h5 {
     text-align: center;
     margin-bottom: 5px;
 }
-/* .agreement ul{
-    margin-top: 5px;
-} */
+
 .contact-info h3 {
     text-align: center;
 }
@@ -826,13 +830,17 @@ h5 {
 .reservations-form {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
     order: 2;
+    width: 100%;
+    max-width: 600px;
 }
-@media (min-width: 992px) {
-    .contact-body,
+@media (min-width: 1024px) {
+    .contact-area .contact-body {
+        flex-direction: row;
+    }
     .reservations-body {
         flex-direction: row;
         gap: 50px;
@@ -842,10 +850,6 @@ h5 {
     text-align: center;
 }
 .hours {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     margin: 25px auto;
 }
 .hours h5 {
@@ -858,17 +862,26 @@ h5 {
     margin: 5px 0;
 }
 iframe {
-    width: 600px;
+    width: auto;
     height: 300px;
     border: none;
 }
-
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+}
 fieldset {
+    position: relative;
     margin: 1rem 0;
     border: 1px solid var(--text-color-header);
     border-radius: 10px;
-    padding: 0.5rem 5%;
-    width: 20rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 20rem;
 }
 fieldset:last-of-type {
     margin-bottom: 5px;
@@ -884,7 +897,8 @@ fieldset div {
     padding-top: 1rem;
     color: var(--text-color-header);
     font-size: 0.8rem;
-    width: 18rem;
+    width: 100%;
+    max-width: 18rem;
 }
 fieldset label.top input,
 fieldset label.top textarea,
@@ -898,7 +912,6 @@ fieldset label.top select {
     background-color: rgba(0, 0, 0, 0.1);
     color: var(--text-color-main);
     width: 100%;
-    max-width: 20rem;
 }
 fieldset label.sbs {
     display: block;
@@ -1114,7 +1127,7 @@ tbody tr td:first-child {
     margin: 5px 0;
 }
 .rental-benefits ul,
-.agreement ul{
+.agreement ul {
     padding: 0;
     line-height: 2;
 }
@@ -1132,7 +1145,7 @@ tbody tr td:first-child {
     width: 0.875rem;
     height: 0.875rem;
     background-image: url("../images/svg/circle-check.svg");
-    background-size: cover; 
+    background-size: cover;
 }
 .check-svg {
     width: 0.875rem;

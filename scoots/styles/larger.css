@@ -31,7 +31,6 @@
     footer section {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-auto-rows: 4;
     }
     .footer-title {
         grid-column: 1 / span 9;
