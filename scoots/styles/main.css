@@ -689,10 +689,12 @@ h5 {
 .card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     text-align: center;
+    line-height: 1.3;
     width: 100%;
     max-width: 375px;
 }
@@ -710,6 +712,11 @@ h5 {
     font-size: 1.1em;
     font-weight: 700;
     margin: 10px 0;
+}
+.card h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
 }
 .card p {
     font-size: 0.85em;
@@ -730,6 +737,24 @@ h5 {
 }
 .places-info .card:nth-child(2) {
     width: 375px;
+}
+.cost {
+    font-size: 2em;
+    font-weight: 800;
+}
+.cost-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.cost-type p {
+    margin: 0;
+}
+.cost-sp{
+    font-size: 2.5em;
+    font-weight: 600;
+    color: lightgray
 }
 
 /* Reservations Banner */
@@ -872,6 +897,17 @@ h5 {
     font-size: 0.9em;
     margin: 5px 0;
 }
+.reservations-fun {
+    text-align: center;
+    color: var(--text-color-header);
+    order: 3;
+}
+.reservations-fun img{
+    width: 75%;
+    height: auto;
+
+}
+
 iframe {
     width: auto;
     height: 300px;
@@ -926,7 +962,7 @@ fieldset label.top select {
 }
 fieldset label.sbs {
     display: block;
-    padding: 0.7rem 0;
+    padding: 0.7rem .3rem 0;
     color: var(--text-color-header);
 }
 fieldset label.rad {
@@ -1067,6 +1103,7 @@ fieldset label.top textarea:required:valid {
     color: var(--text-color-header);
     order: 2;
 }
+
 table {
     margin: 10px auto;
     border: thin solid var(--border);

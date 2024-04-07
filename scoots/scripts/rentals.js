@@ -46,16 +46,24 @@ const displayRatesCards = (rentals) => {
     priceCards.forEach((priceCard, index) => {
         const type = rentals[index];
 
-            const cardInfo = document.createElement("div");
+        const cardInfo = document.createElement("div");
 
-            cardInfo.innerHTML = `
-            <p>Riders: ${type.persons}</p>
-            <p>Full Day: $${type.reservation_full_day}</p>
-            <p>Half Day: $${type.reservation_half_day}</p>
-            <p>Walk-in Full Day: $${type.walk_in_full_day}</p>
-            <p>Walk-in Half Day: $${type.walk_in_half_day}</p>
+        cardInfo.innerHTML = `
+        <p>Max persons: ${type.persons}</p>
+            <h4>Reservation</h4>
+            <div class="cost-type">
+            <p><span class="cost">$${type.reservation_full_day}</span>/full</p>
+            <span class="cost-sp">/</span>
+            <p><span class="cost">$${type.reservation_half_day}</span>/half</p>
+            </div>
+            <h4>Same Day</h4>
+            <div class="cost-type">
+            <p><span class="cost">$${type.walk_in_full_day}</span>/full</p>
+            <span class="cost-sp">/</span>
+            <p><span class="cost">$${type.walk_in_half_day}</span>/half</p>
+            </div>
             `;
-            priceCard.appendChild(cardInfo);
+
+        priceCard.insertAdjacentElement("afterend", cardInfo);
     });
 };
-
