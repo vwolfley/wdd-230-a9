@@ -28,7 +28,9 @@ apiFetchOpenWeather(urlOpenWeather);
 function displayOneCallResults(data) {
     console.log(data);
     const results = data.daily;
-    const weatherBanner = document.querySelector(".weather");
+    const weatherBanner = document.querySelector(".weather-container");
+    const weather = document.createElement("div");
+    weather.classList.add("weather");
     const weatherGroup = document.querySelector(".weatherGroup");
 
     // Current day high temperature
@@ -44,7 +46,7 @@ function displayOneCallResults(data) {
     // Current weather icon
     const currentIcon = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}.png`;
 
-    weatherBanner.innerHTML = `
+    weather.innerHTML = `
     <article class="weatherGroup">
     <span>
         <div>Currently</div>
@@ -58,6 +60,7 @@ function displayOneCallResults(data) {
     </span>
 </article>
 `;
+    weatherBanner.appendChild(weather);
 
     // Filter the results to get the next 5 days
     const dailyResults = results.slice(1, 5);
@@ -90,7 +93,8 @@ function displayOneCallResults(data) {
             </div>
     </span>
 `;
-        weatherBanner.appendChild(futureDay);
+        weather.appendChild(futureDay);
+        weatherBanner.appendChild(weather);
     });
 }
 
