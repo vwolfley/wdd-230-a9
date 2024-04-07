@@ -38,21 +38,21 @@
         },
         {
             "class": "jeep",
-            "type": "Jeep Wrangler - 4 door a/c",
-            "persons": 5,
-            "reservation_half_day": 70,
-            "reservation_full_day": 100,
-            "walk_in_half_day": 85,
-            "walk_in_full_day": 125
-        },
-        {
-            "class": "jeep",
             "type": "Jeep Wrangler - 2 door",
             "persons": 4,
             "reservation_half_day": 60,
             "reservation_full_day": 85,
             "walk_in_half_day": 70,
             "walk_in_full_day": 90
+        },
+        {
+            "class": "jeep",
+            "type": "Jeep Wrangler - 4 door a/c",
+            "persons": 5,
+            "reservation_half_day": 70,
+            "reservation_full_day": 100,
+            "walk_in_half_day": 85,
+            "walk_in_full_day": 125
         }
     ]
 }
