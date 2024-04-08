@@ -20,6 +20,13 @@ function showSuccess() {
         success.classList.add("banner-hide");
     }, 3000); // Hide the message after 3 seconds
 }
+function openModal() {
+    document.getElementById("emailModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("emailModal").style.display = "none";
+}
 
 // Call Functions
 getCopyrightYear();

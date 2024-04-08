@@ -813,6 +813,15 @@ h5 {
     width: 80%;
     max-width: 400px;
 }
+.modal-content .icon svg {
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+}
+.modal-content p {
+    text-align: center;
+}
 
 .close {
     color: #aaa;
