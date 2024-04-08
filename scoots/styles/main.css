@@ -289,8 +289,9 @@ footer section {
     font-size: 0.8em;
     gap: 0.8em;
 }
-.address h4 {
-    font-weight: 600;
+.address-title {
+    font-weight: 800;
+    font-size: 1.1em;
     color: var(--text-color-header);
     margin: 0;
 }
@@ -301,14 +302,17 @@ footer section {
 .address a:hover {
     color: var(--text-color-secondary);
 }
-address div {
+.address .address-group {
     display: flex;
-    align-items: center;
-    font-style: normal;
-    gap: 15px;
+    gap: 0.5em;
 }
-address div p {
+.street {
+    display: flex;
+    flex-direction: column;
+}
+.street p {
     margin: 0;
+    gap: 0.5em;
 }
 
 /* Social Media icons */
@@ -417,37 +421,22 @@ address div p {
 }
 
 .btn-primary {
+    text-decoration: none;
     color: #ffffff;
     background-color: #4f46e5;
 }
 .btn-primary:hover {
     background-color: #6366f1;
 }
-.btn-primary a {
-    text-decoration: none;
-    color: #ffffff;
-}
-.btn-secondary {
-    color: var(--text-color-header);
-    background-color: var(--accent3-color);
-}
-.btn-secondary:hover {
-    background-color: #bef264;
-}
-.btn-secondary a {
-    text-decoration: none;
-    color: var(--text-color-header);
-}
+.btn-secondary,
 .btn-reserve {
+    text-decoration: none;
     color: var(--text-color-header);
     background-color: var(--accent3-color);
 }
+.btn-secondary:hover,
 .btn-reserve:hover {
     background-color: #bef264;
-}
-.btn-reserve a {
-    text-decoration: none;
-    color: var(--text-color-header);
 }
 
 /* *********************************
@@ -767,12 +756,12 @@ h5 {
     align-items: center;
     padding: 20px 50px;
 }
-.reservations-banner.banner-one article {
+.reservations-banner.banner-one div {
     text-align: center;
     padding: 20px;
     order: 1;
 }
-.reservations-banner.banner-two article {
+.reservations-banner.banner-two div {
     text-align: center;
     padding: 20px;
     order: 2;
