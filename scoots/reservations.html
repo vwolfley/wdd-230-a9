@@ -127,7 +127,7 @@
                         </section>
                     </div>
                     <div class="reservations-form">
-                        <form method="get" action="thankyou.html">
+                        <form method="get" action="#">
                             <fieldset>
                                 <legend>Vehicle Registration Information</legend>
                                 <label class="top">Pickup Date*<input type="date" id="start-date" name="start-date" required /></label>
@@ -166,8 +166,13 @@
                                         <option value="5">5</option>
                                     </select>
                                 </label>
-                                <label class="sbs"><input type="checkbox" name="insurance" value="yes" /> Add Vehicle Insurance</label>
-                                <label class="sbs"><input type="checkbox" name="agreement" value="yes" /> I have Read the Rental Agreement</label>
+                                <label for="insurance" class="sbs"
+                                    ><input type="checkbox" id="insurance" name="insurance" value="yes" /> Add Vehicle Insurance</label
+                                >
+                                <label for="agreement" class="sbs"
+                                    ><input type="checkbox" id="agreement" name="agreement" value="yes" required /> I have Read the Rental
+                                    Agreement</label
+                                >
                             </fieldset>
                             <fieldset>
                                 <legend>Drivers Information</legend>
@@ -217,11 +222,19 @@
                                     ></textarea>
                                 </label>
                             </fieldset>
-
                             <button class="btn btn-primary" onclick="validateForm(event)">Reserve my Ride</button>
                         </form>
                     </div>
                 </div>
+                <!-- Successful Submission Modal -->
+                <div class="modal" id="successModal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2>Great!</h2>
+                        <p>Your reservation has been confirmed.</p>
+                    </div>
+                </div>
+                <!-- / Successful Submission Modal -->
             </section>
         </main>
         <!-- /End Content -->

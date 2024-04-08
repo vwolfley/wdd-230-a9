@@ -69,7 +69,7 @@ function populateCountryDropdown() {
 populateCountryDropdown();
 
 function validateForm(event) {
-    const elements = document.querySelectorAll("#start-date, #end-date, #vehicle, #riders, #name, #phone, #email, #countryDropdown");
+    const elements = document.querySelectorAll("#start-date, #end-date, #vehicle, #riders, #name, #phone, #email, #countryDropdown, #agreement");
     const radioInputs = document.querySelectorAll('input[type="radio"][name="period"]');
     let isValid = true;
 
@@ -92,9 +92,11 @@ function validateForm(event) {
     }
 
     if (isValid) {
+        openModal();
         // Form is valid, submit it
         event.preventDefault(); // Prevent form submission
     } else {
+        alert("Error! Please correctly fill out the request!");
         event.preventDefault(); // Prevent form submission
     }
 }
@@ -108,6 +110,13 @@ function showError() {
         error.classList.remove("error", "show");
         error.classList.add("hide");
     }, 3000); // Hide the message after 3 seconds
+}
+function openModal() {
+    document.getElementById("successModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("successModal").style.display = "none";
 }
 
 /* ****************************************************
