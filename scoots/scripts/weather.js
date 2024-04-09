@@ -26,7 +26,7 @@ async function apiFetchOpenWeather(url) {
 apiFetchOpenWeather(urlOpenWeather);
 
 function displayOneCallResults(data) {
-    console.log(data);
+    // console.log(data);
     const results = data.daily;
     const weatherBanner = document.querySelector(".weather-container");
     const weather = document.createElement("div");
