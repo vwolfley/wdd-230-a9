@@ -129,7 +129,7 @@ button.addEventListener("click", () => {
         const bookTitle = userInfo.slice(0, -1).join(" ");
         // Convert the chapter number to an integer from the last element of the array
         const chapterNumber = parseInt(userInfo[userInfo.length - 1]);
-        console.log(bookTitle, chapterNumber);
+        // console.log(bookTitle, chapterNumber);
 
         listItem.textContent = checkBookChapter(bookTitle, chapterNumber);
 

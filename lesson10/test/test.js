@@ -21,9 +21,9 @@ apiFetch();
 function displayResults(data) {
   const heroes = data.members;
   console.log(heroes);
-
+// 
   const power = data.members.find(
     (member) => member.name === "Eternal Flame"
   ).powers[1];
-  console.log(power);
+  // console.log(power);
 }
